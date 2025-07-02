@@ -1,1 +1,1424 @@
-[]
+[
+    {
+        "id": "bf5e655127c9578c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1907dd6630cd7ddb",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d2ee038fe7467ef5",
+        "type": "group",
+        "z": "bf5e655127c9578c",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "a81bfe381a299ae8",
+            "defa1b25bfdad136",
+            "79d363965f2c9137",
+            "828406ef2e1208af",
+            "7b953dc06222bf54",
+            "c8b596e4faab55fa"
+        ],
+        "x": 14,
+        "y": 179,
+        "w": 692,
+        "h": 182
+    },
+    {
+        "id": "weather_tab",
+        "type": "ui_tab",
+        "name": "Dashboard Climático - Paraná",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "info_group",
+        "type": "ui_group",
+        "name": "Información General",
+        "tab": "weather_tab",
+        "order": 1,
+        "disp": true,
+        "width": 13,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0cdd2d881ca76402",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1a4ef4caaf99cdc1",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "d2fec0dea9711bb7",
+        "type": "ui-theme",
+        "name": "Modo Oscuro",
+        "colors": {
+            "surface": "#212121",
+            "primary": "#0094ce",
+            "bgPage": "#1c1c1c",
+            "groupBg": "#636363",
+            "groupOutline": "#616161"
+        },
+        "sizes": {
+            "density": "comfortable",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "08aed830afccaac7",
+        "type": "ui-page",
+        "name": "Weather App",
+        "ui": "1a4ef4caaf99cdc1",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "d2fec0dea9711bb7",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "2"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "c19ee71d22291d08",
+        "type": "ui-group",
+        "name": "Información General",
+        "page": "08aed830afccaac7",
+        "width": "9",
+        "height": "5",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1f4c23f18083d146",
+        "type": "ui-group",
+        "name": "Group 2",
+        "page": "08aed830afccaac7",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c23ba618fd3cf0df",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "64fd35d87b3a549c",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "631a158bdd534e29",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0c8238f66756ae25",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 9,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "47bb279ea8fde94f",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 11,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "d2488131174b169a",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 14,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "ef2ff3f658af9040",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 16,
+        "width": 13,
+        "height": 1
+    },
+    {
+        "id": "bb2bf3896d71549a",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "365f382df8dfcccf",
+        "type": "ui_text_input",
+        "z": "bf5e655127c9578c",
+        "name": "",
+        "label": "Ubicación",
+        "tooltip": "Ingrese su ubicación",
+        "group": "info_group",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 100,
+        "y": 80,
+        "wires": [
+            [
+                "70c5ac94f46c00d3",
+                "7c0bbc2aec9d860f"
+            ]
+        ]
+    },
+    {
+        "id": "70c5ac94f46c00d3",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "7c0bbc2aec9d860f",
+        "type": "function",
+        "z": "bf5e655127c9578c",
+        "name": "Function Geocoding URL",
+        "func": "// 1. Obtener la ciudad del mensaje\nconst city = msg.payload;\n\n// 2. Codificar la ciudad para URL (manejar espacios y caracteres especiales)\nconst encodedCity = encodeURIComponent(city);\n\n// 3. Construir la URL usando template literals (backticks)\nmsg.url = `http://api.openweathermap.org/geo/1.0/direct?q=${encodedCity}&limit=5&appid=029e2971fd993ff3081a6fdf47ad6f19&lang=es`;\n\n// 4. Limpiar el payload para evitar conflictos\nmsg.payload = \"\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 80,
+        "wires": [
+            [
+                "78302da6e441ced1",
+                "bb2bf3896d71549a"
+            ]
+        ]
+    },
+    {
+        "id": "78302da6e441ced1",
+        "type": "http request",
+        "z": "bf5e655127c9578c",
+        "name": "Geocoding API",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 580,
+        "y": 80,
+        "wires": [
+            [
+                "d63b93ca23c47bf1",
+                "79d363965f2c9137"
+            ]
+        ]
+    },
+    {
+        "id": "d63b93ca23c47bf1",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "73f890d084667d65",
+        "type": "http request",
+        "z": "bf5e655127c9578c",
+        "name": "OpenWeather API",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 830,
+        "y": 260,
+        "wires": [
+            [
+                "cd4ece94f26ed638",
+                "282aebe1ec5977ef",
+                "2d3115754f8edcac"
+            ]
+        ]
+    },
+    {
+        "id": "cd4ece94f26ed638",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fbd16b97616ae56b",
+        "type": "ui_text",
+        "z": "bf5e655127c9578c",
+        "group": "info_group",
+        "order": 5,
+        "width": 9,
+        "height": 1,
+        "name": "Condición",
+        "label": "",
+        "format": "{{msg.payload.weather[0].description}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "27",
+        "color": "#e3e3e3",
+        "x": 760,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "1cb0dc155b70e8e4",
+        "type": "ui_text",
+        "z": "bf5e655127c9578c",
+        "group": "info_group",
+        "order": 8,
+        "width": 4,
+        "height": 2,
+        "name": "Temperatura",
+        "label": "",
+        "format": "{{msg.payload.main.temp}}°C",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "60",
+        "color": "#d28314",
+        "x": 610,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "e76ce8990cdf48ac",
+        "type": "ui_text",
+        "z": "bf5e655127c9578c",
+        "group": "info_group",
+        "order": 13,
+        "width": 6,
+        "height": 1,
+        "name": "ST",
+        "label": "ST",
+        "format": "{{msg.payload.main.feels_like}}°C",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "20",
+        "color": "#999999",
+        "x": 590,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "7a4ce8e770a1feac",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2d3115754f8edcac",
+        "type": "link out",
+        "z": "bf5e655127c9578c",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "fc67490d54bbe2f5",
+            "eed12ab3f6afa078"
+        ],
+        "x": 1005,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "fc67490d54bbe2f5",
+        "type": "link in",
+        "z": "bf5e655127c9578c",
+        "name": "link in 1",
+        "links": [
+            "2d3115754f8edcac"
+        ],
+        "x": 425,
+        "y": 480,
+        "wires": [
+            [
+                "1cb0dc155b70e8e4",
+                "e76ce8990cdf48ac",
+                "c1a53cc7f1aeb2f4",
+                "0d2ef347dee1d259"
+            ]
+        ]
+    },
+    {
+        "id": "282aebe1ec5977ef",
+        "type": "link out",
+        "z": "bf5e655127c9578c",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "1be1f30274bf861e"
+        ],
+        "x": 1005,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "1be1f30274bf861e",
+        "type": "link in",
+        "z": "bf5e655127c9578c",
+        "name": "link in 2",
+        "links": [
+            "282aebe1ec5977ef"
+        ],
+        "x": 945,
+        "y": 460,
+        "wires": [
+            [
+                "3f4d62a56a1623de",
+                "08c4c7fb5e7ba2d1",
+                "62a93e50991ad4e4"
+            ]
+        ]
+    },
+    {
+        "id": "3f4d62a56a1623de",
+        "type": "ui_text",
+        "z": "bf5e655127c9578c",
+        "group": "info_group",
+        "order": 15,
+        "width": 5,
+        "height": 1,
+        "name": "Humedad",
+        "label": "Humedad:",
+        "format": "{{msg.payload.main.humidity}} %",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Arial Black,Arial Black,Gadget,sans-serif",
+        "fontSize": "18",
+        "color": "#ffffff",
+        "x": 1100,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "6034370819b67302",
+        "type": "link out",
+        "z": "bf5e655127c9578c",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "8f9aed7d3a4a8d8c",
+            "15e3e0a67f022e92"
+        ],
+        "x": 755,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8f9aed7d3a4a8d8c",
+        "type": "link in",
+        "z": "bf5e655127c9578c",
+        "name": "link in 3",
+        "links": [
+            "6034370819b67302"
+        ],
+        "x": 425,
+        "y": 400,
+        "wires": [
+            [
+                "bcce512540f0a89a"
+            ]
+        ]
+    },
+    {
+        "id": "08c4c7fb5e7ba2d1",
+        "type": "ui_text",
+        "z": "bf5e655127c9578c",
+        "group": "info_group",
+        "order": 10,
+        "width": 5,
+        "height": 1,
+        "name": "Presión",
+        "label": "Presión:",
+        "format": "{{msg.payload.main.pressure}} hPa",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Arial Black,Arial Black,Gadget,sans-serif",
+        "fontSize": "18",
+        "color": "#ffffff",
+        "x": 1100,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "62a93e50991ad4e4",
+        "type": "ui_text",
+        "z": "bf5e655127c9578c",
+        "group": "info_group",
+        "order": 12,
+        "width": 5,
+        "height": 1,
+        "name": "Viento",
+        "label": "Viento:",
+        "format": "{{msg.payload.wind.speed}} m/s",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Arial Black,Arial Black,Gadget,sans-serif",
+        "fontSize": "18",
+        "color": "#ffffff",
+        "x": 1090,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a81bfe381a299ae8",
+        "type": "template",
+        "z": "bf5e655127c9578c",
+        "g": "d2ee038fe7467ef5",
+        "name": "",
+        "field": "url",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "https://api.openweathermap.org/data/2.5/weather?lat={{lat}}&lon={{lon}}&appid=029e2971fd993ff3081a6fdf47ad6f19&units=metric&lang=sp\n",
+        "output": "str",
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "defa1b25bfdad136",
+                "7b953dc06222bf54"
+            ]
+        ]
+    },
+    {
+        "id": "defa1b25bfdad136",
+        "type": "change",
+        "z": "bf5e655127c9578c",
+        "g": "d2ee038fe7467ef5",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "7a4ce8e770a1feac",
+                "73f890d084667d65",
+                "6034370819b67302"
+            ]
+        ]
+    },
+    {
+        "id": "79d363965f2c9137",
+        "type": "change",
+        "z": "bf5e655127c9578c",
+        "g": "d2ee038fe7467ef5",
+        "name": "Extraer datos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lat",
+                "pt": "msg",
+                "to": "payload[0].lat",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "lon",
+                "pt": "msg",
+                "to": "payload[0].lon",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "cityName",
+                "pt": "msg",
+                "to": "msg.payload[0].name",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "state",
+                "pt": "msg",
+                "to": "payload[0].state",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "country",
+                "pt": "msg",
+                "to": "payload[0].country",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "a81bfe381a299ae8",
+                "828406ef2e1208af",
+                "3c58e9afe9934e5d"
+            ]
+        ]
+    },
+    {
+        "id": "828406ef2e1208af",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "g": "d2ee038fe7467ef5",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7b953dc06222bf54",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "g": "d2ee038fe7467ef5",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c8b596e4faab55fa",
+        "type": "comment",
+        "z": "bf5e655127c9578c",
+        "g": "d2ee038fe7467ef5",
+        "name": "",
+        "info": "// Esta función va después del nodo JSON que procesa la respuesta del Geocoding API\n// Extrae las coordenadas y construye la URL para el Weather API\n\n// 1. Parsear la respuesta del Geocoding API\n//const geocodingData = JSON.parse(msg.payload);\nconst geocodingData = msg.payload;\n\n// 2. Verificar que tengamos resultados\nif (geocodingData && geocodingData.length > 0) {\n    // 3. Tomar el primer resultado (más relevante)\n    const location = geocodingData[0];\n    const lat = location.lat;\n    const lon = location.lon;\n    \n    // 4. Construir la URL para el Weather API usando las coordenadas\n    msg.url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=029e2971fd993ff3081a6fdf47ad6f19&units=metric`;\n    \n    // 5. Guardar información adicional para referencia\n    msg.cityName = location.name;\n    msg.state = location.state;\n    msg.country = location.country;\n    msg.coordinates = { lat: lat, lon: lon };\n    \n    // 6. Limpiar payload para el próximo request\n    msg.payload = \"\";\n    \n    return msg;\n} else {\n    // Si no hay resultados, enviar un error\n    msg.payload = \"No se encontraron coordenadas para la ciudad ingresada\";\n    return null;\n}",
+        "x": 100,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c1a53cc7f1aeb2f4",
+        "type": "function",
+        "z": "bf5e655127c9578c",
+        "name": "Mayúscula",
+        "func": "let desc = msg.payload.weather[0].description;\nmsg.payload.weather[0].description = desc.charAt(0).toUpperCase() + desc.slice(1);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 440,
+        "wires": [
+            [
+                "fbd16b97616ae56b"
+            ]
+        ]
+    },
+    {
+        "id": "0d2ef347dee1d259",
+        "type": "ui_template",
+        "z": "bf5e655127c9578c",
+        "group": "info_group",
+        "name": "icono clima",
+        "order": 7,
+        "width": 2,
+        "height": 2,
+        "format": "<!-- <div style=\"background-color: black; padding: 10px; border-radius: 8px; display: inline-block;\"> -->\n    <img ng-src=\"https://openweathermap.org/img/wn/{{msg.payload.weather[0].icon}}@2x.png\" style=\"width: 70px; height: 70px;\" alt=\"weather icon\">\n<!-- </div> -->",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 610,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c58e9afe9934e5d",
+        "type": "template",
+        "z": "bf5e655127c9578c",
+        "name": "",
+        "field": "url",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "https://api.openweathermap.org/data/2.5/forecast?lat={{lat}}&lon={{lon}}&appid=029e2971fd993ff3081a6fdf47ad6f19&units=metric&lang=sp",
+        "output": "str",
+        "x": 260,
+        "y": 700,
+        "wires": [
+            [
+                "6e22fe0ca3650e67",
+                "5a70bb53ba139132"
+            ]
+        ]
+    },
+    {
+        "id": "6e22fe0ca3650e67",
+        "type": "change",
+        "z": "bf5e655127c9578c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 700,
+        "wires": [
+            [
+                "889c320a80d0c795",
+                "67fcc841e7c95cd9"
+            ]
+        ]
+    },
+    {
+        "id": "889c320a80d0c795",
+        "type": "http request",
+        "z": "bf5e655127c9578c",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 690,
+        "y": 700,
+        "wires": [
+            [
+                "4f8e8579dd305220",
+                "b4ea5d06525296d4"
+            ]
+        ]
+    },
+    {
+        "id": "5a70bb53ba139132",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "67fcc841e7c95cd9",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "b4ea5d06525296d4",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "4f8e8579dd305220",
+        "type": "function",
+        "z": "bf5e655127c9578c",
+        "name": "pronostico 5 dias",
+        "func": "const data = msg.payload.list;\nconst cityTimezoneOffset = msg.payload.city.timezone * 1000;\nconst days = {};\n\ndata.forEach(entry => {\n    const utcDate = new Date(entry.dt_txt + 'Z');\n    const localDate = new Date(utcDate.getTime() + cityTimezoneOffset);\n    const dayKey = localDate.toISOString().split('T')[0];\n    \n    if (!days[dayKey]) {\n        days[dayKey] = {\n            date: localDate,\n            temp_max: entry.main.temp,\n            temp_min: entry.main.temp,\n            temps: [entry.main.temp],\n            icons: [{icon: entry.weather[0].icon, hour: localDate.getUTCHours()}],\n            pop: [Math.round((entry.pop || 0) * 100)],\n            wind: [entry.wind.speed]\n        };\n    } else {\n        // Temperaturas\n        days[dayKey].temp_max = Math.max(days[dayKey].temp_max, entry.main.temp);\n        days[dayKey].temp_min = Math.min(days[dayKey].temp_min, entry.main.temp);\n        days[dayKey].temps.push(entry.main.temp);\n        \n        // Probabilidad de lluvia (acumulamos todos los valores)\n        days[dayKey].pop.push(Math.round((entry.pop || 0) * 100));\n        \n        // Viento (acumulamos para luego promediar)\n        days[dayKey].wind.push(entry.wind.speed);\n        \n        // Íconos (guardamos todos para selección posterior)\n        days[dayKey].icons.push({\n            icon: entry.weather[0].icon,\n            hour: localDate.getUTCHours()\n        });\n    }\n});\n\n// Procesamiento final\nconst forecast = Object.values(days)\n    .sort((a, b) => a.date - b.date)\n    .slice(0, 5)\n    .map(day => {\n        // Seleccionar ícono más representativo (más cercano a las 12-15h)\n        const bestIcon = day.icons.reduce((best, current) => \n            (Math.abs(current.hour - 14) < Math.abs(best.hour - 14) ? current : best));\n        \n        // Calcular probabilidad de lluvia máxima del día\n        const maxPop = Math.max(...day.pop);\n        \n        // Calcular velocidad promedio del viento\n        const avgWind = day.wind.reduce((sum, speed) => sum + speed, 0) / day.wind.length;\n        \n        // Formatear día\n        const formattedDay = day.date.toLocaleDateString('es-AR', {\n            weekday: 'short',\n            day: 'numeric'\n        });\n        \n        return {\n            day: formattedDay.charAt(0).toUpperCase() + formattedDay.slice(1),\n            temp_max: Math.round(day.temp_max),\n            temp_min: Math.round(day.temp_min),\n            icon: bestIcon.icon,\n            description: bestIcon.description,\n            pop: maxPop,  // Máxima probabilidad de lluvia del día\n            wind: parseFloat(avgWind.toFixed(2))  // Velocidad promedio del viento\n        };\n    });\n\nmsg.forecast = forecast;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 700,
+        "wires": [
+            [
+                "8d060494c7a2bdc7",
+                "baabb039b53a2202"
+            ]
+        ]
+    },
+    {
+        "id": "8d060494c7a2bdc7",
+        "type": "ui_template",
+        "z": "bf5e655127c9578c",
+        "group": "info_group",
+        "name": "",
+        "order": 17,
+        "width": 13,
+        "height": 6,
+        "format": "<table style=\"width:100%; color:white; background:#222; border-radius:8px; padding:10px;\">\n    <tr style=\"text-align:left;\">\n        <th>Día</th>\n        <th>Máx / Mín</th>\n        <th>Condición</th>\n        <th>Lluvia</th>\n        <th>Viento</th>\n    </tr>\n    <tr ng-repeat=\"item in msg.forecast\">\n        <td>{{item.day}}</td>\n        <td>{{item.temp_max | number:0}}° / {{item.temp_min | number:0}}°</td>\n        <td>\n            <img ng-src=\"https://openweathermap.org/img/wn/{{item.icon}}.png\" style=\"vertical-align:middle; width:30px;\"> {{item.description}}\n        </td>\n        <td>{{item.pop}}%</td>\n        <td>{{item.wind}} m/s</td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1120,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "baabb039b53a2202",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "bcce512540f0a89a",
+        "type": "ui_text",
+        "z": "bf5e655127c9578c",
+        "group": "info_group",
+        "order": 3,
+        "width": 11,
+        "height": 1,
+        "name": "Ubicación",
+        "label": "",
+        "format": "{{msg.cityName}}, {{msg.state}}, {{msg.country}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "30",
+        "color": "#d6d6d6",
+        "x": 600,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "381d87ebf936e121",
+        "type": "link in",
+        "z": "bf5e655127c9578c",
+        "name": "link in 6",
+        "links": [
+            "b112b75518abbee7"
+        ],
+        "x": 145,
+        "y": 140,
+        "wires": [
+            [
+                "7c0bbc2aec9d860f"
+            ]
+        ]
+    },
+    {
+        "id": "15e3e0a67f022e92",
+        "type": "link in",
+        "z": "1907dd6630cd7ddb",
+        "name": "link in 4",
+        "links": [
+            "6034370819b67302"
+        ],
+        "x": 275,
+        "y": 240,
+        "wires": [
+            [
+                "70f0fb24f6bae197",
+                "dd941479493e3542"
+            ]
+        ]
+    },
+    {
+        "id": "e860948a53c9da1f",
+        "type": "ui-text",
+        "z": "1907dd6630cd7ddb",
+        "group": "c19ee71d22291d08",
+        "order": 2,
+        "width": null,
+        "height": 0,
+        "name": "Ubicación",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": "30",
+        "color": "#d9d9d9",
+        "wrapText": false,
+        "className": "",
+        "x": 620,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "70f0fb24f6bae197",
+        "type": "debug",
+        "z": "1907dd6630cd7ddb",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "dd941479493e3542",
+        "type": "function",
+        "z": "1907dd6630cd7ddb",
+        "name": "Format payload",
+        "func": "msg.payload = msg.cityName + \", \" + msg.state + \", \" +  msg.country\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "e860948a53c9da1f"
+            ]
+        ]
+    },
+    {
+        "id": "eed12ab3f6afa078",
+        "type": "link in",
+        "z": "1907dd6630cd7ddb",
+        "name": "link in 5",
+        "links": [
+            "2d3115754f8edcac"
+        ],
+        "x": 265,
+        "y": 420,
+        "wires": [
+            [
+                "46900e40f6bb7fb0",
+                "a614f95b7d7f349d",
+                "732d4c911353aed3"
+            ]
+        ]
+    },
+    {
+        "id": "46900e40f6bb7fb0",
+        "type": "function",
+        "z": "1907dd6630cd7ddb",
+        "name": "function 1",
+        "func": "let desc = msg.payload.weather[0].description;\nmsg.payload.weather[0].description = desc.charAt(0).toUpperCase() + desc.slice(1);\n\nmsg.payload = msg.payload.weather[0].description\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "6fd72d08ba863662"
+            ]
+        ]
+    },
+    {
+        "id": "6fd72d08ba863662",
+        "type": "ui-text",
+        "z": "1907dd6630cd7ddb",
+        "group": "c19ee71d22291d08",
+        "order": 3,
+        "width": 1,
+        "height": "1",
+        "name": "Condición",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": "20",
+        "color": "#e3e3e3",
+        "wrapText": false,
+        "className": "",
+        "x": 620,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d4f6c049627ac4e3",
+        "type": "ui-text-input",
+        "z": "1907dd6630cd7ddb",
+        "group": "c19ee71d22291d08",
+        "name": "Ubicación",
+        "label": "Ubicación",
+        "order": 1,
+        "width": 4,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "text",
+        "tooltip": "ciudad, provincia, país",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "b112b75518abbee7",
+                "fd4c5881a629b182"
+            ]
+        ]
+    },
+    {
+        "id": "b112b75518abbee7",
+        "type": "link out",
+        "z": "1907dd6630cd7ddb",
+        "name": "link out 4",
+        "mode": "link",
+        "links": [
+            "381d87ebf936e121"
+        ],
+        "x": 495,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "fd4c5881a629b182",
+        "type": "debug",
+        "z": "1907dd6630cd7ddb",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "a614f95b7d7f349d",
+        "type": "function",
+        "z": "1907dd6630cd7ddb",
+        "name": "function 2",
+        "func": "msg.payload = msg.payload.main.temp + \"°C\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 420,
+        "wires": [
+            [
+                "9fb6eebafe01a66b"
+            ]
+        ]
+    },
+    {
+        "id": "9fb6eebafe01a66b",
+        "type": "ui-text",
+        "z": "1907dd6630cd7ddb",
+        "group": "c19ee71d22291d08",
+        "order": 4,
+        "width": 1,
+        "height": "1",
+        "name": "Temperatura",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": "20",
+        "color": "#e3e3e3",
+        "wrapText": false,
+        "className": "",
+        "x": 630,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d9e70ada82b67226",
+        "type": "ui-text",
+        "z": "1907dd6630cd7ddb",
+        "group": "c19ee71d22291d08",
+        "order": 5,
+        "width": 1,
+        "height": 1,
+        "name": "ST",
+        "label": "ST ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": "20",
+        "color": "#e3e3e3",
+        "wrapText": false,
+        "className": "",
+        "x": 610,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "732d4c911353aed3",
+        "type": "function",
+        "z": "1907dd6630cd7ddb",
+        "name": "function 3",
+        "func": "msg.payload = msg.payload.main.feels_like + \"°C\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 460,
+        "wires": [
+            [
+                "d9e70ada82b67226"
+            ]
+        ]
+    }
+]
