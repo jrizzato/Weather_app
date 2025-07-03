@@ -8,14 +8,6 @@
         "env": []
     },
     {
-        "id": "1907dd6630cd7ddb",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "d2ee038fe7467ef5",
         "type": "group",
         "z": "bf5e655127c9578c",
@@ -160,161 +152,53 @@
         }
     },
     {
-        "id": "1a4ef4caaf99cdc1",
-        "type": "ui-base",
-        "name": "My Dashboard",
-        "path": "/dashboard",
-        "appIcon": "",
-        "includeClientData": true,
-        "acceptsClientConfig": [
-            "ui-notification",
-            "ui-control"
-        ],
-        "showPathInSidebar": false,
-        "headerContent": "page",
-        "navigationStyle": "default",
-        "titleBarStyle": "default",
-        "showReconnectNotification": true,
-        "notificationDisplayTime": 1,
-        "showDisconnectNotification": true,
-        "allowInstall": true
-    },
-    {
-        "id": "d2fec0dea9711bb7",
-        "type": "ui-theme",
-        "name": "Modo Oscuro",
-        "colors": {
-            "surface": "#212121",
-            "primary": "#0094ce",
-            "bgPage": "#1c1c1c",
-            "groupBg": "#636363",
-            "groupOutline": "#616161"
-        },
-        "sizes": {
-            "density": "comfortable",
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
-    },
-    {
-        "id": "08aed830afccaac7",
-        "type": "ui-page",
-        "name": "Weather App",
-        "ui": "1a4ef4caaf99cdc1",
-        "path": "/page1",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "d2fec0dea9711bb7",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "2"
-            }
-        ],
-        "order": 1,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "c19ee71d22291d08",
-        "type": "ui-group",
-        "name": "Información General",
-        "page": "08aed830afccaac7",
-        "width": "9",
-        "height": "5",
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
-        "id": "1f4c23f18083d146",
-        "type": "ui-group",
-        "name": "Group 2",
-        "page": "08aed830afccaac7",
-        "width": 6,
-        "height": 1,
-        "order": 2,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
-        "id": "c23ba618fd3cf0df",
+        "id": "362fccc6143044db",
         "type": "ui_spacer",
         "z": "bf5e655127c9578c",
         "name": "spacer",
         "group": "info_group",
-        "order": 2,
+        "order": 3,
         "width": 2,
         "height": 1
     },
     {
-        "id": "64fd35d87b3a549c",
+        "id": "27289f15558c5425",
         "type": "ui_spacer",
         "z": "bf5e655127c9578c",
         "name": "spacer",
         "group": "info_group",
-        "order": 4,
-        "width": 3,
+        "order": 5,
+        "width": 4,
         "height": 1
     },
     {
-        "id": "631a158bdd534e29",
+        "id": "6bc3dd51f1ddc246",
         "type": "ui_spacer",
         "z": "bf5e655127c9578c",
         "name": "spacer",
         "group": "info_group",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "0c8238f66756ae25",
-        "type": "ui_spacer",
-        "z": "bf5e655127c9578c",
-        "name": "spacer",
-        "group": "info_group",
-        "order": 9,
+        "order": 8,
         "width": 2,
         "height": 1
     },
     {
-        "id": "47bb279ea8fde94f",
+        "id": "a79ad5955f430178",
         "type": "ui_spacer",
         "z": "bf5e655127c9578c",
         "name": "spacer",
         "group": "info_group",
-        "order": 11,
+        "order": 10,
         "width": 2,
         "height": 1
     },
     {
-        "id": "d2488131174b169a",
+        "id": "d4eaf2d31a72c141",
         "type": "ui_spacer",
         "z": "bf5e655127c9578c",
         "name": "spacer",
         "group": "info_group",
-        "order": 14,
+        "order": 13,
         "width": 2,
-        "height": 1
-    },
-    {
-        "id": "ef2ff3f658af9040",
-        "type": "ui_spacer",
-        "z": "bf5e655127c9578c",
-        "name": "spacer",
-        "group": "info_group",
-        "order": 16,
-        "width": 13,
         "height": 1
     },
     {
@@ -489,7 +373,7 @@
         "type": "ui_text",
         "z": "bf5e655127c9578c",
         "group": "info_group",
-        "order": 5,
+        "order": 4,
         "width": 9,
         "height": 1,
         "name": "Condición",
@@ -510,7 +394,7 @@
         "type": "ui_text",
         "z": "bf5e655127c9578c",
         "group": "info_group",
-        "order": 8,
+        "order": 7,
         "width": 4,
         "height": 2,
         "name": "Temperatura",
@@ -531,7 +415,7 @@
         "type": "ui_text",
         "z": "bf5e655127c9578c",
         "group": "info_group",
-        "order": 13,
+        "order": 12,
         "width": 6,
         "height": 1,
         "name": "ST",
@@ -633,7 +517,7 @@
         "type": "ui_text",
         "z": "bf5e655127c9578c",
         "group": "info_group",
-        "order": 15,
+        "order": 14,
         "width": 5,
         "height": 1,
         "name": "Humedad",
@@ -684,7 +568,7 @@
         "type": "ui_text",
         "z": "bf5e655127c9578c",
         "group": "info_group",
-        "order": 10,
+        "order": 9,
         "width": 5,
         "height": 1,
         "name": "Presión",
@@ -705,7 +589,7 @@
         "type": "ui_text",
         "z": "bf5e655127c9578c",
         "group": "info_group",
-        "order": 12,
+        "order": 11,
         "width": 5,
         "height": 1,
         "name": "Viento",
@@ -902,7 +786,7 @@
         "z": "bf5e655127c9578c",
         "group": "info_group",
         "name": "icono clima",
-        "order": 7,
+        "order": 6,
         "width": 2,
         "height": 2,
         "format": "<!-- <div style=\"background-color: black; padding: 10px; border-radius: 8px; display: inline-block;\"> -->\n    <img ng-src=\"https://openweathermap.org/img/wn/{{msg.payload.weather[0].icon}}@2x.png\" style=\"width: 70px; height: 70px;\" alt=\"weather icon\">\n<!-- </div> -->",
@@ -1046,7 +930,7 @@
         "type": "function",
         "z": "bf5e655127c9578c",
         "name": "pronostico 5 dias",
-        "func": "const data = msg.payload.list;\nconst cityTimezoneOffset = msg.payload.city.timezone * 1000;\nconst days = {};\n\ndata.forEach(entry => {\n    const utcDate = new Date(entry.dt_txt + 'Z');\n    const localDate = new Date(utcDate.getTime() + cityTimezoneOffset);\n    const dayKey = localDate.toISOString().split('T')[0];\n    \n    if (!days[dayKey]) {\n        days[dayKey] = {\n            date: localDate,\n            temp_max: entry.main.temp,\n            temp_min: entry.main.temp,\n            temps: [entry.main.temp],\n            icons: [{icon: entry.weather[0].icon, hour: localDate.getUTCHours()}],\n            pop: [Math.round((entry.pop || 0) * 100)],\n            wind: [entry.wind.speed]\n        };\n    } else {\n        // Temperaturas\n        days[dayKey].temp_max = Math.max(days[dayKey].temp_max, entry.main.temp);\n        days[dayKey].temp_min = Math.min(days[dayKey].temp_min, entry.main.temp);\n        days[dayKey].temps.push(entry.main.temp);\n        \n        // Probabilidad de lluvia (acumulamos todos los valores)\n        days[dayKey].pop.push(Math.round((entry.pop || 0) * 100));\n        \n        // Viento (acumulamos para luego promediar)\n        days[dayKey].wind.push(entry.wind.speed);\n        \n        // Íconos (guardamos todos para selección posterior)\n        days[dayKey].icons.push({\n            icon: entry.weather[0].icon,\n            hour: localDate.getUTCHours()\n        });\n    }\n});\n\n// Procesamiento final\nconst forecast = Object.values(days)\n    .sort((a, b) => a.date - b.date)\n    .slice(0, 5)\n    .map(day => {\n        // Seleccionar ícono más representativo (más cercano a las 12-15h)\n        const bestIcon = day.icons.reduce((best, current) => \n            (Math.abs(current.hour - 14) < Math.abs(best.hour - 14) ? current : best));\n        \n        // Calcular probabilidad de lluvia máxima del día\n        const maxPop = Math.max(...day.pop);\n        \n        // Calcular velocidad promedio del viento\n        const avgWind = day.wind.reduce((sum, speed) => sum + speed, 0) / day.wind.length;\n        \n        // Formatear día\n        const formattedDay = day.date.toLocaleDateString('es-AR', {\n            weekday: 'short',\n            day: 'numeric'\n        });\n        \n        return {\n            day: formattedDay.charAt(0).toUpperCase() + formattedDay.slice(1),\n            temp_max: Math.round(day.temp_max),\n            temp_min: Math.round(day.temp_min),\n            icon: bestIcon.icon,\n            description: bestIcon.description,\n            pop: maxPop,  // Máxima probabilidad de lluvia del día\n            wind: parseFloat(avgWind.toFixed(2))  // Velocidad promedio del viento\n        };\n    });\n\nmsg.forecast = forecast;\nreturn msg;",
+        "func": "const data = msg.payload.list;\nconst cityTimezoneOffset = msg.payload.city.timezone * 1000; // Offset en milisegundos\nconst days = {};\n\ndata.forEach(entry => {\n    // Ajustar hora UTC a zona horaria local de la ciudad\n    const utcDate = new Date(entry.dt_txt + 'Z');\n    const localDate = new Date(utcDate.getTime() + cityTimezoneOffset);\n\n    // Crear clave única usando fecha local\n    const dayKey = localDate.toISOString().split('T')[0];\n\n    if (!days[dayKey]) {\n        days[dayKey] = {\n            date: localDate,  // Guardamos objeto Date para formateo consistente\n            temp_max: entry.main.temp,\n            temp_min: entry.main.temp,\n            temps: [entry.main.temp],\n            icon: entry.weather[0].icon,\n            description: entry.weather[0].description,\n            pop: Math.round((entry.pop || 0) * 100),\n            wind: entry.wind.speed\n        };\n    } else {\n        days[dayKey].temp_max = Math.max(days[dayKey].temp_max, entry.main.temp);\n        days[dayKey].temp_min = Math.min(days[dayKey].temp_min, entry.main.temp);\n        days[dayKey].pop = Math.max(days[dayKey].pop, Math.round((entry.pop || 0) * 100));\n        days[dayKey].temps.push(entry.main.temp);\n\n        // Actualizar ícono si esta entrada está más cerca del mediodía\n        const currentHour = localDate.getUTCHours();\n        const bestHour = days[dayKey].date.getUTCHours();\n        if (Math.abs(12 - currentHour) < Math.abs(12 - bestHour)) {\n            days[dayKey].icon = entry.weather[0].icon;\n            days[dayKey].description = entry.weather[0].description;\n            days[dayKey].date = localDate;\n        }\n    }\n});\n\n// Convertir y formatear resultados\nconst forecast = Object.values(days)\n    .sort((a, b) => a.date - b.date)\n    .slice(0, 5)\n    .map(day => {\n        const formattedDay = day.date.toLocaleDateString('es-AR', {\n            weekday: 'short',\n            day: 'numeric'\n        });\n\n        return {\n            day: formattedDay.charAt(0).toUpperCase() + formattedDay.slice(1),\n            temp_max: Math.round(day.temp_max),\n            temp_min: Math.round(day.temp_min),\n            icon: day.icon,\n            description: day.description,\n            pop: day.pop,\n            wind: day.wind\n        };\n    });\n\nmsg.forecast = forecast;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1068,7 +952,7 @@
         "z": "bf5e655127c9578c",
         "group": "info_group",
         "name": "",
-        "order": 17,
+        "order": 15,
         "width": 13,
         "height": 6,
         "format": "<table style=\"width:100%; color:white; background:#222; border-radius:8px; padding:10px;\">\n    <tr style=\"text-align:left;\">\n        <th>Día</th>\n        <th>Máx / Mín</th>\n        <th>Condición</th>\n        <th>Lluvia</th>\n        <th>Viento</th>\n    </tr>\n    <tr ng-repeat=\"item in msg.forecast\">\n        <td>{{item.day}}</td>\n        <td>{{item.temp_max | number:0}}° / {{item.temp_min | number:0}}°</td>\n        <td>\n            <img ng-src=\"https://openweathermap.org/img/wn/{{item.icon}}.png\" style=\"vertical-align:middle; width:30px;\"> {{item.description}}\n        </td>\n        <td>{{item.pop}}%</td>\n        <td>{{item.wind}} m/s</td>\n    </tr>\n</table>",
@@ -1105,7 +989,7 @@
         "type": "ui_text",
         "z": "bf5e655127c9578c",
         "group": "info_group",
-        "order": 3,
+        "order": 2,
         "width": 11,
         "height": 1,
         "name": "Ubicación",
@@ -1134,290 +1018,6 @@
         "wires": [
             [
                 "7c0bbc2aec9d860f"
-            ]
-        ]
-    },
-    {
-        "id": "15e3e0a67f022e92",
-        "type": "link in",
-        "z": "1907dd6630cd7ddb",
-        "name": "link in 4",
-        "links": [
-            "6034370819b67302"
-        ],
-        "x": 275,
-        "y": 240,
-        "wires": [
-            [
-                "70f0fb24f6bae197",
-                "dd941479493e3542"
-            ]
-        ]
-    },
-    {
-        "id": "e860948a53c9da1f",
-        "type": "ui-text",
-        "z": "1907dd6630cd7ddb",
-        "group": "c19ee71d22291d08",
-        "order": 2,
-        "width": null,
-        "height": 0,
-        "name": "Ubicación",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": true,
-        "font": "",
-        "fontSize": "30",
-        "color": "#d9d9d9",
-        "wrapText": false,
-        "className": "",
-        "x": 620,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "70f0fb24f6bae197",
-        "type": "debug",
-        "z": "1907dd6630cd7ddb",
-        "name": "debug 12",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 420,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "dd941479493e3542",
-        "type": "function",
-        "z": "1907dd6630cd7ddb",
-        "name": "Format payload",
-        "func": "msg.payload = msg.cityName + \", \" + msg.state + \", \" +  msg.country\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 440,
-        "y": 240,
-        "wires": [
-            [
-                "e860948a53c9da1f"
-            ]
-        ]
-    },
-    {
-        "id": "eed12ab3f6afa078",
-        "type": "link in",
-        "z": "1907dd6630cd7ddb",
-        "name": "link in 5",
-        "links": [
-            "2d3115754f8edcac"
-        ],
-        "x": 265,
-        "y": 420,
-        "wires": [
-            [
-                "46900e40f6bb7fb0",
-                "a614f95b7d7f349d",
-                "732d4c911353aed3"
-            ]
-        ]
-    },
-    {
-        "id": "46900e40f6bb7fb0",
-        "type": "function",
-        "z": "1907dd6630cd7ddb",
-        "name": "function 1",
-        "func": "let desc = msg.payload.weather[0].description;\nmsg.payload.weather[0].description = desc.charAt(0).toUpperCase() + desc.slice(1);\n\nmsg.payload = msg.payload.weather[0].description\n\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 440,
-        "y": 380,
-        "wires": [
-            [
-                "6fd72d08ba863662"
-            ]
-        ]
-    },
-    {
-        "id": "6fd72d08ba863662",
-        "type": "ui-text",
-        "z": "1907dd6630cd7ddb",
-        "group": "c19ee71d22291d08",
-        "order": 3,
-        "width": 1,
-        "height": "1",
-        "name": "Condición",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": true,
-        "font": "",
-        "fontSize": "20",
-        "color": "#e3e3e3",
-        "wrapText": false,
-        "className": "",
-        "x": 620,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "d4f6c049627ac4e3",
-        "type": "ui-text-input",
-        "z": "1907dd6630cd7ddb",
-        "group": "c19ee71d22291d08",
-        "name": "Ubicación",
-        "label": "Ubicación",
-        "order": 1,
-        "width": 4,
-        "height": 0,
-        "topic": "topic",
-        "topicType": "msg",
-        "mode": "text",
-        "tooltip": "ciudad, provincia, país",
-        "delay": 300,
-        "passthru": true,
-        "sendOnDelay": true,
-        "sendOnBlur": true,
-        "sendOnEnter": true,
-        "className": "",
-        "clearable": false,
-        "sendOnClear": false,
-        "icon": "",
-        "iconPosition": "left",
-        "iconInnerPosition": "inside",
-        "x": 320,
-        "y": 80,
-        "wires": [
-            [
-                "b112b75518abbee7",
-                "fd4c5881a629b182"
-            ]
-        ]
-    },
-    {
-        "id": "b112b75518abbee7",
-        "type": "link out",
-        "z": "1907dd6630cd7ddb",
-        "name": "link out 4",
-        "mode": "link",
-        "links": [
-            "381d87ebf936e121"
-        ],
-        "x": 495,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "fd4c5881a629b182",
-        "type": "debug",
-        "z": "1907dd6630cd7ddb",
-        "name": "debug 13",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 540,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "a614f95b7d7f349d",
-        "type": "function",
-        "z": "1907dd6630cd7ddb",
-        "name": "function 2",
-        "func": "msg.payload = msg.payload.main.temp + \"°C\"\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 440,
-        "y": 420,
-        "wires": [
-            [
-                "9fb6eebafe01a66b"
-            ]
-        ]
-    },
-    {
-        "id": "9fb6eebafe01a66b",
-        "type": "ui-text",
-        "z": "1907dd6630cd7ddb",
-        "group": "c19ee71d22291d08",
-        "order": 4,
-        "width": 1,
-        "height": "1",
-        "name": "Temperatura",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": true,
-        "font": "",
-        "fontSize": "20",
-        "color": "#e3e3e3",
-        "wrapText": false,
-        "className": "",
-        "x": 630,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "d9e70ada82b67226",
-        "type": "ui-text",
-        "z": "1907dd6630cd7ddb",
-        "group": "c19ee71d22291d08",
-        "order": 5,
-        "width": 1,
-        "height": 1,
-        "name": "ST",
-        "label": "ST ",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "style": true,
-        "font": "",
-        "fontSize": "20",
-        "color": "#e3e3e3",
-        "wrapText": false,
-        "className": "",
-        "x": 610,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "732d4c911353aed3",
-        "type": "function",
-        "z": "1907dd6630cd7ddb",
-        "name": "function 3",
-        "func": "msg.payload = msg.payload.main.feels_like + \"°C\"\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 440,
-        "y": 460,
-        "wires": [
-            [
-                "d9e70ada82b67226"
             ]
         ]
     }
