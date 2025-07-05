@@ -8,6 +8,22 @@
         "env": []
     },
     {
+        "id": "508a808153b7b662",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f4763a9faccc7e5d",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "d2ee038fe7467ef5",
         "type": "group",
         "z": "bf5e655127c9578c",
@@ -28,8 +44,8 @@
             "7b953dc06222bf54",
             "c8b596e4faab55fa"
         ],
-        "x": 14,
-        "y": 179,
+        "x": 54,
+        "y": 199,
         "w": 692,
         "h": 182
     },
@@ -214,36 +230,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 40,
+        "x": 600,
+        "y": 60,
         "wires": []
-    },
-    {
-        "id": "365f382df8dfcccf",
-        "type": "ui_text_input",
-        "z": "bf5e655127c9578c",
-        "name": "",
-        "label": "Ubicación",
-        "tooltip": "Ingrese su ubicación",
-        "group": "info_group",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 100,
-        "y": 80,
-        "wires": [
-            [
-                "70c5ac94f46c00d3",
-                "7c0bbc2aec9d860f"
-            ]
-        ]
     },
     {
         "id": "70c5ac94f46c00d3",
@@ -258,8 +247,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 280,
-        "y": 40,
+        "x": 320,
+        "y": 60,
         "wires": []
     },
     {
@@ -274,8 +263,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
-        "y": 80,
+        "x": 370,
+        "y": 100,
         "wires": [
             [
                 "78302da6e441ced1",
@@ -299,8 +288,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 580,
-        "y": 80,
+        "x": 620,
+        "y": 100,
         "wires": [
             [
                 "d63b93ca23c47bf1",
@@ -321,8 +310,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 40,
+        "x": 860,
+        "y": 60,
         "wires": []
     },
     {
@@ -341,8 +330,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 830,
-        "y": 260,
+        "x": 870,
+        "y": 280,
         "wires": [
             [
                 "cd4ece94f26ed638",
@@ -364,71 +353,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "fbd16b97616ae56b",
-        "type": "ui_text",
-        "z": "bf5e655127c9578c",
-        "group": "info_group",
-        "order": 4,
-        "width": 9,
-        "height": 1,
-        "name": "Condición",
-        "label": "",
-        "format": "{{msg.payload.weather[0].description}}",
-        "layout": "row-center",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": "27",
-        "color": "#e3e3e3",
-        "x": 760,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "1cb0dc155b70e8e4",
-        "type": "ui_text",
-        "z": "bf5e655127c9578c",
-        "group": "info_group",
-        "order": 7,
-        "width": 4,
-        "height": 2,
-        "name": "Temperatura",
-        "label": "",
-        "format": "{{msg.payload.main.temp}}°C",
-        "layout": "row-center",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": "60",
-        "color": "#d28314",
-        "x": 610,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "e76ce8990cdf48ac",
-        "type": "ui_text",
-        "z": "bf5e655127c9578c",
-        "group": "info_group",
-        "order": 12,
-        "width": 6,
-        "height": 1,
-        "name": "ST",
-        "label": "ST",
-        "format": "{{msg.payload.main.feels_like}}°C",
-        "layout": "row-center",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": "20",
-        "color": "#999999",
-        "x": 590,
-        "y": 580,
+        "x": 1100,
+        "y": 180,
         "wires": []
     },
     {
@@ -444,8 +370,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 220,
+        "x": 840,
+        "y": 240,
         "wires": []
     },
     {
@@ -455,31 +381,11 @@
         "name": "link out 1",
         "mode": "link",
         "links": [
-            "fc67490d54bbe2f5",
-            "eed12ab3f6afa078"
+            "fc67490d54bbe2f5"
         ],
-        "x": 1005,
-        "y": 300,
+        "x": 1055,
+        "y": 380,
         "wires": []
-    },
-    {
-        "id": "fc67490d54bbe2f5",
-        "type": "link in",
-        "z": "bf5e655127c9578c",
-        "name": "link in 1",
-        "links": [
-            "2d3115754f8edcac"
-        ],
-        "x": 425,
-        "y": 480,
-        "wires": [
-            [
-                "1cb0dc155b70e8e4",
-                "e76ce8990cdf48ac",
-                "c1a53cc7f1aeb2f4",
-                "0d2ef347dee1d259"
-            ]
-        ]
     },
     {
         "id": "282aebe1ec5977ef",
@@ -490,47 +396,8 @@
         "links": [
             "1be1f30274bf861e"
         ],
-        "x": 1005,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "1be1f30274bf861e",
-        "type": "link in",
-        "z": "bf5e655127c9578c",
-        "name": "link in 2",
-        "links": [
-            "282aebe1ec5977ef"
-        ],
-        "x": 945,
-        "y": 460,
-        "wires": [
-            [
-                "3f4d62a56a1623de",
-                "08c4c7fb5e7ba2d1",
-                "62a93e50991ad4e4"
-            ]
-        ]
-    },
-    {
-        "id": "3f4d62a56a1623de",
-        "type": "ui_text",
-        "z": "bf5e655127c9578c",
-        "group": "info_group",
-        "order": 14,
-        "width": 5,
-        "height": 1,
-        "name": "Humedad",
-        "label": "Humedad:",
-        "format": "{{msg.payload.main.humidity}} %",
-        "layout": "row-spread",
-        "className": "",
-        "style": true,
-        "font": "Arial Black,Arial Black,Gadget,sans-serif",
-        "fontSize": "18",
-        "color": "#ffffff",
-        "x": 1100,
-        "y": 420,
+        "x": 1055,
+        "y": 280,
         "wires": []
     },
     {
@@ -540,69 +407,10 @@
         "name": "link out 3",
         "mode": "link",
         "links": [
-            "8f9aed7d3a4a8d8c",
-            "15e3e0a67f022e92"
+            "8f9aed7d3a4a8d8c"
         ],
-        "x": 755,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "8f9aed7d3a4a8d8c",
-        "type": "link in",
-        "z": "bf5e655127c9578c",
-        "name": "link in 3",
-        "links": [
-            "6034370819b67302"
-        ],
-        "x": 425,
-        "y": 400,
-        "wires": [
-            [
-                "bcce512540f0a89a"
-            ]
-        ]
-    },
-    {
-        "id": "08c4c7fb5e7ba2d1",
-        "type": "ui_text",
-        "z": "bf5e655127c9578c",
-        "group": "info_group",
-        "order": 9,
-        "width": 5,
-        "height": 1,
-        "name": "Presión",
-        "label": "Presión:",
-        "format": "{{msg.payload.main.pressure}} hPa",
-        "layout": "row-spread",
-        "className": "",
-        "style": true,
-        "font": "Arial Black,Arial Black,Gadget,sans-serif",
-        "fontSize": "18",
-        "color": "#ffffff",
-        "x": 1100,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "62a93e50991ad4e4",
-        "type": "ui_text",
-        "z": "bf5e655127c9578c",
-        "group": "info_group",
-        "order": 11,
-        "width": 5,
-        "height": 1,
-        "name": "Viento",
-        "label": "Viento:",
-        "format": "{{msg.payload.wind.speed}} m/s",
-        "layout": "row-spread",
-        "className": "",
-        "style": true,
-        "font": "Arial Black,Arial Black,Gadget,sans-serif",
-        "fontSize": "18",
-        "color": "#ffffff",
-        "x": 1090,
-        "y": 500,
+        "x": 795,
+        "y": 320,
         "wires": []
     },
     {
@@ -617,8 +425,8 @@
         "syntax": "mustache",
         "template": "https://api.openweathermap.org/data/2.5/weather?lat={{lat}}&lon={{lon}}&appid=029e2971fd993ff3081a6fdf47ad6f19&units=metric&lang=sp\n",
         "output": "str",
-        "x": 380,
-        "y": 260,
+        "x": 420,
+        "y": 280,
         "wires": [
             [
                 "defa1b25bfdad136",
@@ -646,8 +454,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
-        "y": 260,
+        "x": 640,
+        "y": 280,
         "wires": [
             [
                 "7a4ce8e770a1feac",
@@ -704,8 +512,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 190,
-        "y": 260,
+        "x": 230,
+        "y": 280,
         "wires": [
             [
                 "a81bfe381a299ae8",
@@ -727,8 +535,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 380,
-        "y": 220,
+        "x": 420,
+        "y": 240,
         "wires": []
     },
     {
@@ -745,8 +553,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 220,
+        "x": 620,
+        "y": 240,
         "wires": []
     },
     {
@@ -756,50 +564,9 @@
         "g": "d2ee038fe7467ef5",
         "name": "",
         "info": "// Esta función va después del nodo JSON que procesa la respuesta del Geocoding API\n// Extrae las coordenadas y construye la URL para el Weather API\n\n// 1. Parsear la respuesta del Geocoding API\n//const geocodingData = JSON.parse(msg.payload);\nconst geocodingData = msg.payload;\n\n// 2. Verificar que tengamos resultados\nif (geocodingData && geocodingData.length > 0) {\n    // 3. Tomar el primer resultado (más relevante)\n    const location = geocodingData[0];\n    const lat = location.lat;\n    const lon = location.lon;\n    \n    // 4. Construir la URL para el Weather API usando las coordenadas\n    msg.url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=029e2971fd993ff3081a6fdf47ad6f19&units=metric`;\n    \n    // 5. Guardar información adicional para referencia\n    msg.cityName = location.name;\n    msg.state = location.state;\n    msg.country = location.country;\n    msg.coordinates = { lat: lat, lon: lon };\n    \n    // 6. Limpiar payload para el próximo request\n    msg.payload = \"\";\n    \n    return msg;\n} else {\n    // Si no hay resultados, enviar un error\n    msg.payload = \"No se encontraron coordenadas para la ciudad ingresada\";\n    return null;\n}",
-        "x": 100,
-        "y": 320,
+        "x": 140,
+        "y": 340,
         "wires": []
-    },
-    {
-        "id": "c1a53cc7f1aeb2f4",
-        "type": "function",
-        "z": "bf5e655127c9578c",
-        "name": "Mayúscula",
-        "func": "let desc = msg.payload.weather[0].description;\nmsg.payload.weather[0].description = desc.charAt(0).toUpperCase() + desc.slice(1);\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 610,
-        "y": 440,
-        "wires": [
-            [
-                "fbd16b97616ae56b"
-            ]
-        ]
-    },
-    {
-        "id": "0d2ef347dee1d259",
-        "type": "ui_template",
-        "z": "bf5e655127c9578c",
-        "group": "info_group",
-        "name": "icono clima",
-        "order": 6,
-        "width": 2,
-        "height": 2,
-        "format": "<!-- <div style=\"background-color: black; padding: 10px; border-radius: 8px; display: inline-block;\"> -->\n    <img ng-src=\"https://openweathermap.org/img/wn/{{msg.payload.weather[0].icon}}@2x.png\" style=\"width: 70px; height: 70px;\" alt=\"weather icon\">\n<!-- </div> -->",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 610,
-        "y": 500,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "3c58e9afe9934e5d",
@@ -812,8 +579,8 @@
         "syntax": "mustache",
         "template": "https://api.openweathermap.org/data/2.5/forecast?lat={{lat}}&lon={{lon}}&appid=029e2971fd993ff3081a6fdf47ad6f19&units=metric&lang=sp",
         "output": "str",
-        "x": 260,
-        "y": 700,
+        "x": 200,
+        "y": 480,
         "wires": [
             [
                 "6e22fe0ca3650e67",
@@ -840,8 +607,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 700,
+        "x": 420,
+        "y": 480,
         "wires": [
             [
                 "889c320a80d0c795",
@@ -865,8 +632,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 690,
-        "y": 700,
+        "x": 630,
+        "y": 480,
         "wires": [
             [
                 "4f8e8579dd305220",
@@ -887,8 +654,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 660,
+        "x": 400,
+        "y": 440,
         "wires": []
     },
     {
@@ -904,8 +671,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
-        "y": 660,
+        "x": 620,
+        "y": 440,
         "wires": []
     },
     {
@@ -921,8 +688,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
-        "y": 660,
+        "x": 840,
+        "y": 440,
         "wires": []
     },
     {
@@ -937,12 +704,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 930,
-        "y": 700,
+        "x": 870,
+        "y": 480,
         "wires": [
             [
-                "8d060494c7a2bdc7",
-                "baabb039b53a2202"
+                "baabb039b53a2202",
+                "8d060494c7a2bdc7"
             ]
         ]
     },
@@ -961,8 +728,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1120,
-        "y": 700,
+        "x": 1060,
+        "y": 480,
         "wires": [
             []
         ]
@@ -980,14 +747,300 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1120,
-        "y": 660,
+        "x": 1060,
+        "y": 440,
         "wires": []
+    },
+    {
+        "id": "381d87ebf936e121",
+        "type": "link in",
+        "z": "bf5e655127c9578c",
+        "name": "link in 4",
+        "links": [
+            "4f03c0fa1051951a"
+        ],
+        "x": 75,
+        "y": 100,
+        "wires": [
+            [
+                "7c0bbc2aec9d860f"
+            ]
+        ]
+    },
+    {
+        "id": "50d3a132abb3f8ac",
+        "type": "comment",
+        "z": "bf5e655127c9578c",
+        "name": "Ubicación input",
+        "info": "Ingreso de la uvicación\n",
+        "x": 140,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2032303258d5db2a",
+        "type": "comment",
+        "z": "bf5e655127c9578c",
+        "name": "Ubicación mostrada",
+        "info": "",
+        "x": 870,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "e7529d3dccfaeb77",
+        "type": "comment",
+        "z": "bf5e655127c9578c",
+        "name": "Parámetros",
+        "info": "Muestra varios parámetros:\n* humedad\n* presión\n* velocidad del viento",
+        "x": 1110,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "e8e9d520780efd56",
+        "type": "comment",
+        "z": "bf5e655127c9578c",
+        "name": "Parámetros",
+        "info": "Muestra varios parámetros:\n* condición\n* icono del clima\n* temperatura\n* ST",
+        "x": 1110,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "791cb3570cd51cfc",
+        "type": "comment",
+        "z": "bf5e655127c9578c",
+        "name": "Tabla",
+        "info": "Este template crea la tabla con el pronóstico extendido",
+        "x": 1050,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "fbd16b97616ae56b",
+        "type": "ui_text",
+        "z": "508a808153b7b662",
+        "group": "info_group",
+        "order": 4,
+        "width": 9,
+        "height": 1,
+        "name": "Condición",
+        "label": "",
+        "format": "{{msg.payload.weather[0].description}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "27",
+        "color": "#e3e3e3",
+        "x": 480,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "1cb0dc155b70e8e4",
+        "type": "ui_text",
+        "z": "508a808153b7b662",
+        "group": "info_group",
+        "order": 7,
+        "width": 4,
+        "height": 2,
+        "name": "Temperatura",
+        "label": "",
+        "format": "{{msg.payload.main.temp}}°C",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "60",
+        "color": "#d28314",
+        "x": 330,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "e76ce8990cdf48ac",
+        "type": "ui_text",
+        "z": "508a808153b7b662",
+        "group": "info_group",
+        "order": 12,
+        "width": 6,
+        "height": 1,
+        "name": "ST",
+        "label": "ST",
+        "format": "{{msg.payload.main.feels_like}}°C",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "20",
+        "color": "#999999",
+        "x": 310,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "fc67490d54bbe2f5",
+        "type": "link in",
+        "z": "508a808153b7b662",
+        "name": "link in 1",
+        "links": [
+            "2d3115754f8edcac"
+        ],
+        "x": 145,
+        "y": 300,
+        "wires": [
+            [
+                "1cb0dc155b70e8e4",
+                "e76ce8990cdf48ac",
+                "c1a53cc7f1aeb2f4",
+                "0d2ef347dee1d259"
+            ]
+        ]
+    },
+    {
+        "id": "1be1f30274bf861e",
+        "type": "link in",
+        "z": "508a808153b7b662",
+        "name": "link in 2",
+        "links": [
+            "282aebe1ec5977ef"
+        ],
+        "x": 665,
+        "y": 280,
+        "wires": [
+            [
+                "3f4d62a56a1623de",
+                "08c4c7fb5e7ba2d1",
+                "62a93e50991ad4e4"
+            ]
+        ]
+    },
+    {
+        "id": "3f4d62a56a1623de",
+        "type": "ui_text",
+        "z": "508a808153b7b662",
+        "group": "info_group",
+        "order": 14,
+        "width": 5,
+        "height": 1,
+        "name": "Humedad",
+        "label": "Humedad:",
+        "format": "{{msg.payload.main.humidity}} %",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Arial Black,Arial Black,Gadget,sans-serif",
+        "fontSize": "18",
+        "color": "#ffffff",
+        "x": 820,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8f9aed7d3a4a8d8c",
+        "type": "link in",
+        "z": "508a808153b7b662",
+        "name": "link in 3",
+        "links": [
+            "6034370819b67302"
+        ],
+        "x": 145,
+        "y": 220,
+        "wires": [
+            [
+                "bcce512540f0a89a"
+            ]
+        ]
+    },
+    {
+        "id": "08c4c7fb5e7ba2d1",
+        "type": "ui_text",
+        "z": "508a808153b7b662",
+        "group": "info_group",
+        "order": 9,
+        "width": 5,
+        "height": 1,
+        "name": "Presión",
+        "label": "Presión:",
+        "format": "{{msg.payload.main.pressure}} hPa",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Arial Black,Arial Black,Gadget,sans-serif",
+        "fontSize": "18",
+        "color": "#ffffff",
+        "x": 820,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "62a93e50991ad4e4",
+        "type": "ui_text",
+        "z": "508a808153b7b662",
+        "group": "info_group",
+        "order": 11,
+        "width": 5,
+        "height": 1,
+        "name": "Viento",
+        "label": "Viento:",
+        "format": "{{msg.payload.wind.speed}} m/s",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "Arial Black,Arial Black,Gadget,sans-serif",
+        "fontSize": "18",
+        "color": "#ffffff",
+        "x": 810,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c1a53cc7f1aeb2f4",
+        "type": "function",
+        "z": "508a808153b7b662",
+        "name": "Mayúscula",
+        "func": "let desc = msg.payload.weather[0].description;\nmsg.payload.weather[0].description = desc.charAt(0).toUpperCase() + desc.slice(1);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "fbd16b97616ae56b"
+            ]
+        ]
+    },
+    {
+        "id": "0d2ef347dee1d259",
+        "type": "ui_template",
+        "z": "508a808153b7b662",
+        "group": "info_group",
+        "name": "icono clima",
+        "order": 6,
+        "width": 2,
+        "height": 2,
+        "format": "<!-- <div style=\"background-color: black; padding: 10px; border-radius: 8px; display: inline-block;\"> -->\n    <img ng-src=\"https://openweathermap.org/img/wn/{{msg.payload.weather[0].icon}}@2x.png\" style=\"width: 70px; height: 70px;\" alt=\"weather icon\">\n<!-- </div> -->",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 330,
+        "y": 320,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "bcce512540f0a89a",
         "type": "ui_text",
-        "z": "bf5e655127c9578c",
+        "z": "508a808153b7b662",
         "group": "info_group",
         "order": 2,
         "width": 11,
@@ -1001,24 +1054,67 @@
         "font": "Verdana,Verdana,Geneva,sans-serif",
         "fontSize": "30",
         "color": "#d6d6d6",
-        "x": 600,
-        "y": 400,
+        "x": 320,
+        "y": 220,
         "wires": []
     },
     {
-        "id": "381d87ebf936e121",
-        "type": "link in",
-        "z": "bf5e655127c9578c",
-        "name": "link in 6",
-        "links": [
-            "b112b75518abbee7"
-        ],
-        "x": 145,
-        "y": 140,
+        "id": "365f382df8dfcccf",
+        "type": "ui_text_input",
+        "z": "508a808153b7b662",
+        "name": "",
+        "label": "Ubicación",
+        "tooltip": "Ingrese su ubicación",
+        "group": "info_group",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 180,
+        "y": 160,
         "wires": [
             [
-                "7c0bbc2aec9d860f"
+                "4f03c0fa1051951a"
             ]
         ]
+    },
+    {
+        "id": "4f03c0fa1051951a",
+        "type": "link out",
+        "z": "508a808153b7b662",
+        "name": "link out 4",
+        "mode": "link",
+        "links": [
+            "381d87ebf936e121"
+        ],
+        "x": 325,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c118bae63e206fab",
+        "type": "comment",
+        "z": "508a808153b7b662",
+        "name": "Dashboard",
+        "info": "Dashboard",
+        "x": 80,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "73d930eabdb1a6f2",
+        "type": "comment",
+        "z": "f4763a9faccc7e5d",
+        "name": "Dashboard 2.0",
+        "info": "Dashboard 2.0",
+        "x": 100,
+        "y": 40,
+        "wires": []
     }
 ]
