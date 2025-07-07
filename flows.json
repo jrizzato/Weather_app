@@ -846,7 +846,7 @@
         "name": "Ubicación input",
         "info": "Ingreso de la uvicación\n",
         "x": 240,
-        "y": 60,
+        "y": 80,
         "wires": []
     },
     {
@@ -1353,7 +1353,7 @@
             "2d3115754f8edcac"
         ],
         "x": 165,
-        "y": 240,
+        "y": 300,
         "wires": [
             [
                 "4b288962295bf041",
@@ -1685,8 +1685,8 @@
         "links": [
             "247e5126f0f43eb3"
         ],
-        "x": 165,
-        "y": 600,
+        "x": 545,
+        "y": 120,
         "wires": [
             [
                 "70b502cdaaf49f0c"
@@ -1711,8 +1711,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 320,
-        "y": 600,
+        "x": 700,
+        "y": 120,
         "wires": [
             []
         ]
