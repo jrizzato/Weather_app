@@ -42,7 +42,8 @@
             "79d363965f2c9137",
             "828406ef2e1208af",
             "7b953dc06222bf54",
-            "c8b596e4faab55fa"
+            "c8b596e4faab55fa",
+            "ec9a5054d2bd0c9c"
         ],
         "x": 54,
         "y": 199,
@@ -50,24 +51,93 @@
         "h": 182
     },
     {
-        "id": "weather_tab",
-        "type": "ui_tab",
-        "name": "Dashboard Climático - Paraná",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
+        "id": "349ceb200862d9ec",
+        "type": "ui-base",
+        "name": "ui_template.label.myDashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
     },
     {
-        "id": "info_group",
-        "type": "ui_group",
-        "name": "Información General",
-        "tab": "weather_tab",
+        "id": "32f82da62f7d827b",
+        "type": "ui-theme",
+        "name": "ui_template.themes.defaultTheme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "3c778dbe032c5ce3",
+        "type": "ui-page",
+        "name": "Weather App",
+        "ui": "349ceb200862d9ec",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "32f82da62f7d827b",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
         "order": 1,
-        "disp": true,
-        "width": 13,
-        "collapse": false,
-        "className": ""
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "bc0c0b81c4fa9020",
+        "type": "ui-group",
+        "name": "Información general",
+        "page": "3c778dbe032c5ce3",
+        "width": 5,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
         "id": "0cdd2d881ca76402",
@@ -168,6 +238,26 @@
         }
     },
     {
+        "id": "weather_tab",
+        "type": "ui_tab",
+        "name": "Dashboard Climático - Paraná",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "info_group",
+        "type": "ui_group",
+        "name": "Información General",
+        "tab": "weather_tab",
+        "order": 1,
+        "disp": true,
+        "width": 13,
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "362fccc6143044db",
         "type": "ui_spacer",
         "z": "bf5e655127c9578c",
@@ -216,95 +306,6 @@
         "order": 13,
         "width": 2,
         "height": 1
-    },
-    {
-        "id": "349ceb200862d9ec",
-        "type": "ui-base",
-        "name": "ui_template.label.myDashboard",
-        "path": "/dashboard",
-        "appIcon": "",
-        "includeClientData": true,
-        "acceptsClientConfig": [
-            "ui-notification",
-            "ui-control"
-        ],
-        "showPathInSidebar": false,
-        "headerContent": "page",
-        "navigationStyle": "default",
-        "titleBarStyle": "default",
-        "showReconnectNotification": true,
-        "notificationDisplayTime": 1,
-        "showDisconnectNotification": true,
-        "allowInstall": true
-    },
-    {
-        "id": "32f82da62f7d827b",
-        "type": "ui-theme",
-        "name": "ui_template.themes.defaultTheme",
-        "colors": {
-            "surface": "#ffffff",
-            "primary": "#0094CE",
-            "bgPage": "#eeeeee",
-            "groupBg": "#ffffff",
-            "groupOutline": "#cccccc"
-        },
-        "sizes": {
-            "density": "default",
-            "pagePadding": "12px",
-            "groupGap": "12px",
-            "groupBorderRadius": "4px",
-            "widgetGap": "12px"
-        }
-    },
-    {
-        "id": "3c778dbe032c5ce3",
-        "type": "ui-page",
-        "name": "Weather App",
-        "ui": "349ceb200862d9ec",
-        "path": "/page1",
-        "icon": "home",
-        "layout": "grid",
-        "theme": "32f82da62f7d827b",
-        "breakpoints": [
-            {
-                "name": "Default",
-                "px": "0",
-                "cols": "3"
-            },
-            {
-                "name": "Tablet",
-                "px": "576",
-                "cols": "6"
-            },
-            {
-                "name": "Small Desktop",
-                "px": "768",
-                "cols": "9"
-            },
-            {
-                "name": "Desktop",
-                "px": "1024",
-                "cols": "12"
-            }
-        ],
-        "order": 1,
-        "className": "",
-        "visible": "true",
-        "disabled": "false"
-    },
-    {
-        "id": "bc0c0b81c4fa9020",
-        "type": "ui-group",
-        "name": "Información general",
-        "page": "3c778dbe032c5ce3",
-        "width": 5,
-        "height": 1,
-        "order": 1,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
     },
     {
         "id": "bb2bf3896d71549a",
@@ -438,8 +439,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
         "x": 1100,
@@ -580,7 +581,7 @@
                 "t": "set",
                 "p": "cityName",
                 "pt": "msg",
-                "to": "msg.payload[0].name",
+                "to": "payload[0].name",
                 "tot": "msg"
             },
             {
@@ -609,7 +610,8 @@
             [
                 "a81bfe381a299ae8",
                 "828406ef2e1208af",
-                "3c58e9afe9934e5d"
+                "3c58e9afe9934e5d",
+                "ec9a5054d2bd0c9c"
             ]
         ]
     },
@@ -619,11 +621,12 @@
         "z": "bf5e655127c9578c",
         "g": "d2ee038fe7467ef5",
         "name": "debug 4",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
         "x": 420,
@@ -809,7 +812,7 @@
         "type": "debug",
         "z": "bf5e655127c9578c",
         "name": "debug 11",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -904,6 +907,158 @@
         "wires": []
     },
     {
+        "id": "ec9a5054d2bd0c9c",
+        "type": "link out",
+        "z": "bf5e655127c9578c",
+        "g": "d2ee038fe7467ef5",
+        "name": "link out 7",
+        "mode": "link",
+        "links": [
+            "d0da7412aa09eecb"
+        ],
+        "x": 375,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "fc67490d54bbe2f5",
+        "type": "link in",
+        "z": "508a808153b7b662",
+        "name": "link in 1",
+        "links": [
+            "2d3115754f8edcac"
+        ],
+        "x": 145,
+        "y": 300,
+        "wires": [
+            [
+                "1cb0dc155b70e8e4",
+                "e76ce8990cdf48ac",
+                "c1a53cc7f1aeb2f4",
+                "0d2ef347dee1d259"
+            ]
+        ]
+    },
+    {
+        "id": "1be1f30274bf861e",
+        "type": "link in",
+        "z": "508a808153b7b662",
+        "name": "link in 2",
+        "links": [
+            "282aebe1ec5977ef"
+        ],
+        "x": 665,
+        "y": 280,
+        "wires": [
+            [
+                "3f4d62a56a1623de",
+                "08c4c7fb5e7ba2d1",
+                "62a93e50991ad4e4"
+            ]
+        ]
+    },
+    {
+        "id": "8f9aed7d3a4a8d8c",
+        "type": "link in",
+        "z": "508a808153b7b662",
+        "name": "link in 3",
+        "links": [
+            "6034370819b67302"
+        ],
+        "x": 145,
+        "y": 220,
+        "wires": [
+            [
+                "bcce512540f0a89a"
+            ]
+        ]
+    },
+    {
+        "id": "c1a53cc7f1aeb2f4",
+        "type": "function",
+        "z": "508a808153b7b662",
+        "name": "Mayúscula",
+        "func": "let desc = msg.payload.weather[0].description;\nmsg.payload.weather[0].description = desc.charAt(0).toUpperCase() + desc.slice(1);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "fbd16b97616ae56b"
+            ]
+        ]
+    },
+    {
+        "id": "4f03c0fa1051951a",
+        "type": "link out",
+        "z": "508a808153b7b662",
+        "name": "link out 4",
+        "mode": "link",
+        "links": [
+            "381d87ebf936e121"
+        ],
+        "x": 325,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c118bae63e206fab",
+        "type": "comment",
+        "z": "508a808153b7b662",
+        "name": "Dashboard",
+        "info": "Dashboard",
+        "x": 80,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "26f8e50d81401932",
+        "type": "link in",
+        "z": "508a808153b7b662",
+        "name": "link in 8",
+        "links": [
+            "247e5126f0f43eb3"
+        ],
+        "x": 665,
+        "y": 380,
+        "wires": [
+            [
+                "8d060494c7a2bdc7"
+            ]
+        ]
+    },
+    {
+        "id": "365f382df8dfcccf",
+        "type": "ui_text_input",
+        "z": "508a808153b7b662",
+        "name": "",
+        "label": "Ubicación",
+        "tooltip": "Ingrese su ubicación",
+        "group": "info_group",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "4f03c0fa1051951a"
+            ]
+        ]
+    },
+    {
         "id": "fbd16b97616ae56b",
         "type": "ui_text",
         "z": "508a808153b7b662",
@@ -967,43 +1122,6 @@
         "wires": []
     },
     {
-        "id": "fc67490d54bbe2f5",
-        "type": "link in",
-        "z": "508a808153b7b662",
-        "name": "link in 1",
-        "links": [
-            "2d3115754f8edcac"
-        ],
-        "x": 145,
-        "y": 300,
-        "wires": [
-            [
-                "1cb0dc155b70e8e4",
-                "e76ce8990cdf48ac",
-                "c1a53cc7f1aeb2f4",
-                "0d2ef347dee1d259"
-            ]
-        ]
-    },
-    {
-        "id": "1be1f30274bf861e",
-        "type": "link in",
-        "z": "508a808153b7b662",
-        "name": "link in 2",
-        "links": [
-            "282aebe1ec5977ef"
-        ],
-        "x": 665,
-        "y": 280,
-        "wires": [
-            [
-                "3f4d62a56a1623de",
-                "08c4c7fb5e7ba2d1",
-                "62a93e50991ad4e4"
-            ]
-        ]
-    },
-    {
         "id": "3f4d62a56a1623de",
         "type": "ui_text",
         "z": "508a808153b7b662",
@@ -1023,22 +1141,6 @@
         "x": 820,
         "y": 240,
         "wires": []
-    },
-    {
-        "id": "8f9aed7d3a4a8d8c",
-        "type": "link in",
-        "z": "508a808153b7b662",
-        "name": "link in 3",
-        "links": [
-            "6034370819b67302"
-        ],
-        "x": 145,
-        "y": 220,
-        "wires": [
-            [
-                "bcce512540f0a89a"
-            ]
-        ]
     },
     {
         "id": "08c4c7fb5e7ba2d1",
@@ -1083,24 +1185,25 @@
         "wires": []
     },
     {
-        "id": "c1a53cc7f1aeb2f4",
-        "type": "function",
+        "id": "bcce512540f0a89a",
+        "type": "ui_text",
         "z": "508a808153b7b662",
-        "name": "Mayúscula",
-        "func": "let desc = msg.payload.weather[0].description;\nmsg.payload.weather[0].description = desc.charAt(0).toUpperCase() + desc.slice(1);\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 330,
-        "y": 260,
-        "wires": [
-            [
-                "fbd16b97616ae56b"
-            ]
-        ]
+        "group": "info_group",
+        "order": 2,
+        "width": 11,
+        "height": 1,
+        "name": "Ubicación",
+        "label": "",
+        "format": "{{msg.cityName}}, {{msg.state}}, {{msg.country}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "30",
+        "color": "#d6d6d6",
+        "x": 320,
+        "y": 220,
+        "wires": []
     },
     {
         "id": "0d2ef347dee1d259",
@@ -1124,76 +1227,6 @@
         ]
     },
     {
-        "id": "bcce512540f0a89a",
-        "type": "ui_text",
-        "z": "508a808153b7b662",
-        "group": "info_group",
-        "order": 2,
-        "width": 11,
-        "height": 1,
-        "name": "Ubicación",
-        "label": "",
-        "format": "{{msg.cityName}}, {{msg.state}}, {{msg.country}}",
-        "layout": "row-center",
-        "className": "",
-        "style": true,
-        "font": "Verdana,Verdana,Geneva,sans-serif",
-        "fontSize": "30",
-        "color": "#d6d6d6",
-        "x": 320,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "365f382df8dfcccf",
-        "type": "ui_text_input",
-        "z": "508a808153b7b662",
-        "name": "",
-        "label": "Ubicación",
-        "tooltip": "Ingrese su ubicación",
-        "group": "info_group",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 180,
-        "y": 160,
-        "wires": [
-            [
-                "4f03c0fa1051951a"
-            ]
-        ]
-    },
-    {
-        "id": "4f03c0fa1051951a",
-        "type": "link out",
-        "z": "508a808153b7b662",
-        "name": "link out 4",
-        "mode": "link",
-        "links": [
-            "381d87ebf936e121"
-        ],
-        "x": 325,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "c118bae63e206fab",
-        "type": "comment",
-        "z": "508a808153b7b662",
-        "name": "Dashboard",
-        "info": "Dashboard",
-        "x": 80,
-        "y": 40,
-        "wires": []
-    },
-    {
         "id": "8d060494c7a2bdc7",
         "type": "ui_template",
         "z": "508a808153b7b662",
@@ -1212,22 +1245,6 @@
         "y": 380,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "26f8e50d81401932",
-        "type": "link in",
-        "z": "508a808153b7b662",
-        "name": "link in 8",
-        "links": [
-            "247e5126f0f43eb3"
-        ],
-        "x": 665,
-        "y": 380,
-        "wires": [
-            [
-                "8d060494c7a2bdc7"
-            ]
         ]
     },
     {
@@ -1353,7 +1370,7 @@
             "2d3115754f8edcac"
         ],
         "x": 165,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "4b288962295bf041",
@@ -1376,7 +1393,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 240,
+        "y": 300,
         "wires": [
             [
                 "9f59c4e5336f92ca"
@@ -1402,7 +1419,7 @@
         "wrapText": false,
         "className": "",
         "x": 540,
-        "y": 240,
+        "y": 300,
         "wires": []
     },
     {
@@ -1418,7 +1435,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 280,
+        "y": 340,
         "wires": [
             [
                 "1ce6c4a0acc4a742"
@@ -1444,7 +1461,7 @@
         "wrapText": false,
         "className": "",
         "x": 550,
-        "y": 280,
+        "y": 340,
         "wires": []
     },
     {
@@ -1460,7 +1477,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 320,
+        "y": 380,
         "wires": [
             [
                 "38837be4d756a321"
@@ -1486,7 +1503,7 @@
         "wrapText": false,
         "className": "",
         "x": 530,
-        "y": 320,
+        "y": 380,
         "wires": []
     },
     {
@@ -1496,7 +1513,7 @@
         "group": "bc0c0b81c4fa9020",
         "page": "",
         "ui": "",
-        "name": "",
+        "name": "ícono",
         "order": 5,
         "width": 1,
         "height": 2,
@@ -1507,8 +1524,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 540,
-        "y": 380,
+        "x": 530,
+        "y": 440,
         "wires": [
             []
         ]
@@ -1526,7 +1543,7 @@
         "finalize": "",
         "libs": [],
         "x": 310,
-        "y": 380,
+        "y": 440,
         "wires": [
             [
                 "ee804542e97df427"
@@ -1542,7 +1559,7 @@
             "282aebe1ec5977ef"
         ],
         "x": 165,
-        "y": 480,
+        "y": 540,
         "wires": [
             [
                 "56aa4945740c3af5",
@@ -1570,7 +1587,7 @@
         "wrapText": false,
         "className": "",
         "x": 520,
-        "y": 440,
+        "y": 500,
         "wires": []
     },
     {
@@ -1592,7 +1609,7 @@
         "wrapText": false,
         "className": "",
         "x": 520,
-        "y": 480,
+        "y": 540,
         "wires": []
     },
     {
@@ -1614,7 +1631,7 @@
         "wrapText": false,
         "className": "",
         "x": 510,
-        "y": 520,
+        "y": 580,
         "wires": []
     },
     {
@@ -1630,7 +1647,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "68796504d89e02ba"
@@ -1650,7 +1667,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 480,
+        "y": 540,
         "wires": [
             [
                 "47de8a50fb3e26e1"
@@ -1670,7 +1687,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 520,
+        "y": 580,
         "wires": [
             [
                 "5e582caeef8a3483"
@@ -1700,7 +1717,7 @@
         "group": "bc0c0b81c4fa9020",
         "page": "",
         "ui": "",
-        "name": "",
+        "name": "pronóstico",
         "order": 10,
         "width": 0,
         "height": 0,
@@ -1711,10 +1728,50 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 700,
+        "x": 710,
         "y": 120,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "ba8bdc8f14182990",
+        "type": "ui-template",
+        "z": "f4763a9faccc7e5d",
+        "group": "bc0c0b81c4fa9020",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<div id=\"map\" style=\"height: 500px; width: 100%; border: 1px solid #ccc; position: relative;\">\n  <div id=\"loading\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\n    background: rgba(255,255,255,0.9); padding: 10px; border-radius: 6px; font-family: Arial;\">\n    🗺️ Cargando mapa del clima...\n  </div>\n</div>\n\n<script>\n  const API_KEY = \"029e2971fd993ff3081a6fdf47ad6f19\"; // ← tu API key\n\n  function showMap() {\n    const mapDiv = document.getElementById(\"map\");\n    const loading = document.getElementById(\"loading\");\n    if (!mapDiv || typeof window.L === \"undefined\") {\n      console.error(\"❌ Leaflet no está disponible\");\n      return;\n    }\n\n    if (loading) loading.style.display = \"none\";\n\n    const map = window.L.map(\"map\").setView([40.4168, -3.7038], 5);\n\n    window.L.tileLayer(\"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\", {\n      attribution: \"© OpenStreetMap contributors\"\n    }).addTo(map);\n\n    const layers = {\n      \"☁️ Nubes\": window.L.tileLayer(`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=${API_KEY}`, { opacity: 1 }),\n      \"🌧️ Precipitación\": window.L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${API_KEY}`, { opacity: 1 }),\n      \"🌡️ Temperatura\": window.L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${API_KEY}`, { opacity: 1 }),\n      \"💨 Viento\": window.L.tileLayer(`https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=${API_KEY}`, { opacity: 1 })\n    };\n\n    layers[\"☁️ Nubes\"].addTo(map);\n    window.L.control.layers(null, layers, { collapsed: false }).addTo(map);\n    window.L.control.scale().addTo(map);\n\n    setTimeout(() => map.invalidateSize(), 300);\n  }\n\n  function waitForLeafletAndInit(retries = 30) {\n    if (window.L && typeof window.L.map === \"function\") {\n      console.log(\"✅ Leaflet disponible como window.L\");\n      showMap();\n    } else if (retries > 0) {\n      console.log(\"⏳ Esperando window.L.map...\");\n      setTimeout(() => waitForLeafletAndInit(retries - 1), 300);\n    } else {\n      console.error(\"❌ Timeout esperando Leaflet\");\n      const loading = document.getElementById(\"loading\");\n      if (loading) loading.innerText = \"Error cargando Leaflet\";\n    }\n  }\n\n  function loadLeafletOnce() {\n    if (document.getElementById(\"leaflet-script\")) {\n      waitForLeafletAndInit();\n      return;\n    }\n\n    const css = document.createElement(\"link\");\n    css.rel = \"stylesheet\";\n    css.href = \"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css\";\n    document.head.appendChild(css);\n\n    const js = document.createElement(\"script\");\n    js.id = \"leaflet-script\";\n    js.src = \"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js\";\n    js.onload = () => {\n      console.log(\"📦 Leaflet script descargado\");\n      waitForLeafletAndInit();\n    };\n    js.onerror = () => {\n      console.error(\"❌ Falló la carga de Leaflet\");\n      const loading = document.getElementById(\"loading\");\n      if (loading) loading.innerText = \"Error cargando Leaflet\";\n    };\n    document.head.appendChild(js);\n  }\n\n  // Esperar a que se monte el widget en dashboard 2.0\n  setTimeout(() => {\n    console.log(\"🚀 Iniciando carga del mapa\");\n    loadLeafletOnce();\n  }, 500);\n</script>\n",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 320,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0da7412aa09eecb",
+        "type": "link in",
+        "z": "f4763a9faccc7e5d",
+        "name": "link in 10",
+        "links": [
+            "ec9a5054d2bd0c9c"
+        ],
+        "x": 165,
+        "y": 220,
+        "wires": [
+            [
+                "ba8bdc8f14182990"
+            ]
         ]
     }
 ]
