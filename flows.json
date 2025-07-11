@@ -8,47 +8,12 @@
         "env": []
     },
     {
-        "id": "508a808153b7b662",
-        "type": "tab",
-        "label": "Dashboard",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "f4763a9faccc7e5d",
         "type": "tab",
         "label": "Dashboard 2.0",
         "disabled": false,
         "info": "",
         "env": []
-    },
-    {
-        "id": "d2ee038fe7467ef5",
-        "type": "group",
-        "z": "bf5e655127c9578c",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "a81bfe381a299ae8",
-            "defa1b25bfdad136",
-            "79d363965f2c9137",
-            "828406ef2e1208af",
-            "7b953dc06222bf54",
-            "c8b596e4faab55fa",
-            "ec9a5054d2bd0c9c"
-        ],
-        "x": 54,
-        "y": 199,
-        "w": 692,
-        "h": 182
     },
     {
         "id": "349ceb200862d9ec",
@@ -449,7 +414,7 @@
         "type": "debug",
         "z": "bf5e655127c9578c",
         "name": "debug 6",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -517,163 +482,6 @@
         ],
         "x": 795,
         "y": 320,
-        "wires": []
-    },
-    {
-        "id": "a81bfe381a299ae8",
-        "type": "template",
-        "z": "bf5e655127c9578c",
-        "g": "d2ee038fe7467ef5",
-        "name": "Current Weather URL",
-        "field": "url",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "https://api.openweathermap.org/data/2.5/weather?lat={{lat}}&lon={{lon}}&appid=029e2971fd993ff3081a6fdf47ad6f19&units=metric&lang=sp\n",
-        "output": "str",
-        "x": 420,
-        "y": 280,
-        "wires": [
-            [
-                "defa1b25bfdad136",
-                "7b953dc06222bf54"
-            ]
-        ]
-    },
-    {
-        "id": "defa1b25bfdad136",
-        "type": "change",
-        "z": "bf5e655127c9578c",
-        "g": "d2ee038fe7467ef5",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 640,
-        "y": 280,
-        "wires": [
-            [
-                "7a4ce8e770a1feac",
-                "73f890d084667d65",
-                "6034370819b67302"
-            ]
-        ]
-    },
-    {
-        "id": "79d363965f2c9137",
-        "type": "change",
-        "z": "bf5e655127c9578c",
-        "g": "d2ee038fe7467ef5",
-        "name": "Extraer datos",
-        "rules": [
-            {
-                "t": "set",
-                "p": "lat",
-                "pt": "msg",
-                "to": "payload[0].lat",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "lon",
-                "pt": "msg",
-                "to": "payload[0].lon",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "cityName",
-                "pt": "msg",
-                "to": "payload[0].name",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "state",
-                "pt": "msg",
-                "to": "payload[0].state",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "country",
-                "pt": "msg",
-                "to": "payload[0].country",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 170,
-        "y": 280,
-        "wires": [
-            [
-                "a81bfe381a299ae8",
-                "828406ef2e1208af",
-                "3c58e9afe9934e5d",
-                "ec9a5054d2bd0c9c"
-            ]
-        ]
-    },
-    {
-        "id": "828406ef2e1208af",
-        "type": "debug",
-        "z": "bf5e655127c9578c",
-        "g": "d2ee038fe7467ef5",
-        "name": "debug 4",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 380,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "7b953dc06222bf54",
-        "type": "debug",
-        "z": "bf5e655127c9578c",
-        "g": "d2ee038fe7467ef5",
-        "name": "debug 7",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "c8b596e4faab55fa",
-        "type": "comment",
-        "z": "bf5e655127c9578c",
-        "g": "d2ee038fe7467ef5",
-        "name": "",
-        "info": "// Esta función va después del nodo JSON que procesa la respuesta del Geocoding API\n// Extrae las coordenadas y construye la URL para el Weather API\n\n// 1. Parsear la respuesta del Geocoding API\n//const geocodingData = JSON.parse(msg.payload);\nconst geocodingData = msg.payload;\n\n// 2. Verificar que tengamos resultados\nif (geocodingData && geocodingData.length > 0) {\n    // 3. Tomar el primer resultado (más relevante)\n    const location = geocodingData[0];\n    const lat = location.lat;\n    const lon = location.lon;\n    \n    // 4. Construir la URL para el Weather API usando las coordenadas\n    msg.url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=029e2971fd993ff3081a6fdf47ad6f19&units=metric`;\n    \n    // 5. Guardar información adicional para referencia\n    msg.cityName = location.name;\n    msg.state = location.state;\n    msg.country = location.country;\n    msg.coordinates = { lat: lat, lon: lon };\n    \n    // 6. Limpiar payload para el próximo request\n    msg.payload = \"\";\n    \n    return msg;\n} else {\n    // Si no hay resultados, enviar un error\n    msg.payload = \"No se encontraron coordenadas para la ciudad ingresada\";\n    return null;\n}",
-        "x": 140,
-        "y": 340,
         "wires": []
     },
     {
@@ -788,7 +596,7 @@
         "type": "debug",
         "z": "bf5e655127c9578c",
         "name": "debug 10",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -890,7 +698,7 @@
         "id": "e8e9d520780efd56",
         "type": "comment",
         "z": "bf5e655127c9578c",
-        "name": "Parámetros",
+        "name": "info general",
         "info": "Muestra varios parámetros:\n* condición\n* icono del clima\n* temperatura\n* ST",
         "x": 1110,
         "y": 340,
@@ -921,10 +729,150 @@
         "wires": []
     },
     {
+        "id": "a81bfe381a299ae8",
+        "type": "template",
+        "z": "bf5e655127c9578c",
+        "name": "Current Weather URL",
+        "field": "url",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "https://api.openweathermap.org/data/2.5/weather?lat={{lat}}&lon={{lon}}&appid=029e2971fd993ff3081a6fdf47ad6f19&units=metric&lang=sp\n",
+        "output": "str",
+        "x": 420,
+        "y": 280,
+        "wires": [
+            [
+                "defa1b25bfdad136",
+                "7b953dc06222bf54"
+            ]
+        ]
+    },
+    {
+        "id": "defa1b25bfdad136",
+        "type": "change",
+        "z": "bf5e655127c9578c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 280,
+        "wires": [
+            [
+                "7a4ce8e770a1feac",
+                "73f890d084667d65",
+                "6034370819b67302"
+            ]
+        ]
+    },
+    {
+        "id": "79d363965f2c9137",
+        "type": "change",
+        "z": "bf5e655127c9578c",
+        "name": "Extraer datos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lat",
+                "pt": "msg",
+                "to": "payload[0].lat",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "lon",
+                "pt": "msg",
+                "to": "payload[0].lon",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "cityName",
+                "pt": "msg",
+                "to": "payload[0].name",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "state",
+                "pt": "msg",
+                "to": "payload[0].state",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "country",
+                "pt": "msg",
+                "to": "payload[0].country",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "a81bfe381a299ae8",
+                "828406ef2e1208af",
+                "3c58e9afe9934e5d",
+                "ec9a5054d2bd0c9c"
+            ]
+        ]
+    },
+    {
+        "id": "828406ef2e1208af",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "7b953dc06222bf54",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 240,
+        "wires": []
+    },
+    {
         "id": "ec9a5054d2bd0c9c",
         "type": "link out",
         "z": "bf5e655127c9578c",
-        "g": "d2ee038fe7467ef5",
         "name": "link out 7",
         "mode": "link",
         "links": [
@@ -933,333 +881,6 @@
         "x": 335,
         "y": 320,
         "wires": []
-    },
-    {
-        "id": "fc67490d54bbe2f5",
-        "type": "link in",
-        "z": "508a808153b7b662",
-        "name": "link in 1",
-        "links": [
-            "2d3115754f8edcac"
-        ],
-        "x": 145,
-        "y": 300,
-        "wires": [
-            [
-                "1cb0dc155b70e8e4",
-                "e76ce8990cdf48ac",
-                "c1a53cc7f1aeb2f4",
-                "0d2ef347dee1d259"
-            ]
-        ]
-    },
-    {
-        "id": "1be1f30274bf861e",
-        "type": "link in",
-        "z": "508a808153b7b662",
-        "name": "link in 2",
-        "links": [
-            "282aebe1ec5977ef"
-        ],
-        "x": 665,
-        "y": 280,
-        "wires": [
-            [
-                "3f4d62a56a1623de",
-                "08c4c7fb5e7ba2d1",
-                "62a93e50991ad4e4"
-            ]
-        ]
-    },
-    {
-        "id": "8f9aed7d3a4a8d8c",
-        "type": "link in",
-        "z": "508a808153b7b662",
-        "name": "link in 3",
-        "links": [
-            "6034370819b67302"
-        ],
-        "x": 145,
-        "y": 220,
-        "wires": [
-            [
-                "bcce512540f0a89a"
-            ]
-        ]
-    },
-    {
-        "id": "c1a53cc7f1aeb2f4",
-        "type": "function",
-        "z": "508a808153b7b662",
-        "name": "Mayúscula",
-        "func": "let desc = msg.payload.weather[0].description;\nmsg.payload.weather[0].description = desc.charAt(0).toUpperCase() + desc.slice(1);\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 330,
-        "y": 260,
-        "wires": [
-            [
-                "fbd16b97616ae56b"
-            ]
-        ]
-    },
-    {
-        "id": "4f03c0fa1051951a",
-        "type": "link out",
-        "z": "508a808153b7b662",
-        "name": "link out 4",
-        "mode": "link",
-        "links": [
-            "381d87ebf936e121"
-        ],
-        "x": 325,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "c118bae63e206fab",
-        "type": "comment",
-        "z": "508a808153b7b662",
-        "name": "Dashboard",
-        "info": "Dashboard",
-        "x": 80,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "26f8e50d81401932",
-        "type": "link in",
-        "z": "508a808153b7b662",
-        "name": "link in 8",
-        "links": [
-            "247e5126f0f43eb3"
-        ],
-        "x": 665,
-        "y": 380,
-        "wires": [
-            [
-                "8d060494c7a2bdc7"
-            ]
-        ]
-    },
-    {
-        "id": "365f382df8dfcccf",
-        "type": "ui_text_input",
-        "z": "508a808153b7b662",
-        "name": "",
-        "label": "Ubicación",
-        "tooltip": "Ingrese su ubicación",
-        "group": "info_group",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 180,
-        "y": 160,
-        "wires": [
-            [
-                "4f03c0fa1051951a"
-            ]
-        ]
-    },
-    {
-        "id": "fbd16b97616ae56b",
-        "type": "ui_text",
-        "z": "508a808153b7b662",
-        "group": "info_group",
-        "order": 4,
-        "width": 9,
-        "height": 1,
-        "name": "Condición",
-        "label": "",
-        "format": "{{msg.payload.weather[0].description}}",
-        "layout": "row-center",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": "27",
-        "color": "#e3e3e3",
-        "x": 480,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "1cb0dc155b70e8e4",
-        "type": "ui_text",
-        "z": "508a808153b7b662",
-        "group": "info_group",
-        "order": 7,
-        "width": 4,
-        "height": 2,
-        "name": "Temperatura",
-        "label": "",
-        "format": "{{msg.payload.main.temp}}°C",
-        "layout": "row-center",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": "60",
-        "color": "#d28314",
-        "x": 330,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "e76ce8990cdf48ac",
-        "type": "ui_text",
-        "z": "508a808153b7b662",
-        "group": "info_group",
-        "order": 12,
-        "width": 6,
-        "height": 1,
-        "name": "ST",
-        "label": "ST",
-        "format": "{{msg.payload.main.feels_like}}°C",
-        "layout": "row-center",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": "20",
-        "color": "#999999",
-        "x": 310,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "3f4d62a56a1623de",
-        "type": "ui_text",
-        "z": "508a808153b7b662",
-        "group": "info_group",
-        "order": 14,
-        "width": 5,
-        "height": 1,
-        "name": "Humedad",
-        "label": "Humedad:",
-        "format": "{{msg.payload.main.humidity}} %",
-        "layout": "row-spread",
-        "className": "",
-        "style": true,
-        "font": "Arial Black,Arial Black,Gadget,sans-serif",
-        "fontSize": "18",
-        "color": "#ffffff",
-        "x": 820,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "08c4c7fb5e7ba2d1",
-        "type": "ui_text",
-        "z": "508a808153b7b662",
-        "group": "info_group",
-        "order": 9,
-        "width": 5,
-        "height": 1,
-        "name": "Presión",
-        "label": "Presión:",
-        "format": "{{msg.payload.main.pressure}} hPa",
-        "layout": "row-spread",
-        "className": "",
-        "style": true,
-        "font": "Arial Black,Arial Black,Gadget,sans-serif",
-        "fontSize": "18",
-        "color": "#ffffff",
-        "x": 820,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "62a93e50991ad4e4",
-        "type": "ui_text",
-        "z": "508a808153b7b662",
-        "group": "info_group",
-        "order": 11,
-        "width": 5,
-        "height": 1,
-        "name": "Viento",
-        "label": "Viento:",
-        "format": "{{msg.payload.wind.speed}} m/s",
-        "layout": "row-spread",
-        "className": "",
-        "style": true,
-        "font": "Arial Black,Arial Black,Gadget,sans-serif",
-        "fontSize": "18",
-        "color": "#ffffff",
-        "x": 810,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "bcce512540f0a89a",
-        "type": "ui_text",
-        "z": "508a808153b7b662",
-        "group": "info_group",
-        "order": 2,
-        "width": 11,
-        "height": 1,
-        "name": "Ubicación",
-        "label": "",
-        "format": "{{msg.cityName}}, {{msg.state}}, {{msg.country}}",
-        "layout": "row-center",
-        "className": "",
-        "style": true,
-        "font": "Verdana,Verdana,Geneva,sans-serif",
-        "fontSize": "30",
-        "color": "#d6d6d6",
-        "x": 320,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "0d2ef347dee1d259",
-        "type": "ui_template",
-        "z": "508a808153b7b662",
-        "group": "info_group",
-        "name": "icono clima",
-        "order": 6,
-        "width": 2,
-        "height": 2,
-        "format": "<!-- <div style=\"background-color: black; padding: 10px; border-radius: 8px; display: inline-block;\"> -->\n    <img ng-src=\"https://openweathermap.org/img/wn/{{msg.payload.weather[0].icon}}@2x.png\" style=\"width: 70px; height: 70px;\" alt=\"weather icon\">\n<!-- </div> -->",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 330,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8d060494c7a2bdc7",
-        "type": "ui_template",
-        "z": "508a808153b7b662",
-        "group": "info_group",
-        "name": "",
-        "order": 15,
-        "width": 13,
-        "height": 6,
-        "format": "<table style=\"width:100%; color:white; background:#222; border-radius:8px; padding:10px;\">\n    <tr style=\"text-align:left;\">\n        <th>Día</th>\n        <th>Máx / Mín</th>\n        <th>Condición</th>\n        <th>Lluvia</th>\n        <th>Viento</th>\n    </tr>\n    <tr ng-repeat=\"item in msg.forecast\">\n        <td>{{item.day}}</td>\n        <td>{{item.temp_max | number:0}}° / {{item.temp_min | number:0}}°</td>\n        <td>\n            <img ng-src=\"https://openweathermap.org/img/wn/{{item.icon}}.png\" style=\"vertical-align:middle; width:30px;\"> {{item.description}}\n        </td>\n        <td>{{item.pop}}%</td>\n        <td>{{item.wind}} m/s</td>\n    </tr>\n</table>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 820,
-        "y": 380,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "73d930eabdb1a6f2",
@@ -1760,7 +1381,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "//nodo template para el mapa\n\n<div id=\"map\" style=\"height: 500px; width: 100%; border: 1px solid #ccc; position: relative;\">\n  <div id=\"loading\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\n    background: rgba(255,255,255,0.9); padding: 10px; border-radius: 6px; font-family: Arial;\">\n    🗺️ Cargando mapa del clima...\n  </div>\n</div>\n\n<script>\n  const API_KEY = \"029e2971fd993ff3081a6fdf47ad6f19\"; // ← tu API key\n  let map; // Variable global para el mapa\n  let currentMarker; // Variable para el marcador actual\n\n  function showMap() {\n    const mapDiv = document.getElementById(\"map\");\n    const loading = document.getElementById(\"loading\");\n    if (!mapDiv || typeof window.L === \"undefined\") {\n      console.error(\"❌ Leaflet no está disponible\");\n      return;\n    }\n\n    if (loading) loading.style.display = \"none\";\n\n    // Inicializar mapa centrado en Argentina\n    map = window.L.map(\"map\").setView([-34.6118, -58.3960], 5); // Buenos Aires, Argentina\n\n    window.L.tileLayer(\"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\", {\n      attribution: \"© OpenStreetMap contributors\"\n    }).addTo(map);\n\n    const layers = {\n      \"☁️ Nubes\": window.L.tileLayer(`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=${API_KEY}`, { opacity: 1 }),\n      \"🌧️ Precipitación\": window.L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${API_KEY}`, { opacity: 1 }),\n      \"🌡️ Temperatura\": window.L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${API_KEY}`, { opacity: 1 }),\n      \"💨 Viento\": window.L.tileLayer(`https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=${API_KEY}`, { opacity: 1 })\n    };\n\n    layers[\"☁️ Nubes\"].addTo(map);\n    window.L.control.layers(null, layers, { collapsed: false }).addTo(map);\n    window.L.control.scale().addTo(map);\n\n    setTimeout(() => map.invalidateSize(), 300);\n  }\n\n  // Función para actualizar la ubicación del mapa\n  function updateMapLocation(lat, lon, cityName) {\n    if (!map) {\n      console.error(\"❌ Mapa no inicializado\");\n      return;\n    }\n    // Guardar el estado actual del zoom\n    const currentZoom = map.getZoom();\n\n    // Remover marcador anterior si existe\n    if (currentMarker) {\n      map.removeLayer(currentMarker);\n    }\n\n    // Centrar mapa en la nueva ubicación\n    map.setView([lat, lon], 10);\n\n    // Agregar marcador en la nueva ubicación\n    currentMarker = window.L.marker([lat, lon])\n      .addTo(map)\n      .bindPopup(`📍 ${cityName}`)\n      .openPopup();\n\n    console.log(`🗺️ Mapa actualizado para: ${cityName} (${lat}, ${lon})`);\n  }\n\n  function waitForLeafletAndInit(retries = 30) {\n    if (window.L && typeof window.L.map === \"function\") {\n      console.log(\"✅ Leaflet disponible como window.L\");\n      showMap();\n    } else if (retries > 0) {\n      console.log(\"⏳ Esperando window.L.map...\");\n      setTimeout(() => waitForLeafletAndInit(retries - 1), 300);\n    } else {\n      console.error(\"❌ Timeout esperando Leaflet\");\n      const loading = document.getElementById(\"loading\");\n      if (loading) loading.innerText = \"Error cargando Leaflet\";\n    }\n  }\n\n  function loadLeafletOnce() {\n    if (document.getElementById(\"leaflet-script\")) {\n      waitForLeafletAndInit();\n      return;\n    }\n\n    const css = document.createElement(\"link\");\n    css.rel = \"stylesheet\";\n    css.href = \"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css\";\n    document.head.appendChild(css);\n\n    const js = document.createElement(\"script\");\n    js.id = \"leaflet-script\";\n    js.src = \"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js\";\n    js.onload = () => {\n      console.log(\"📦 Leaflet script descargado\");\n      waitForLeafletAndInit();\n    };\n    js.onerror = () => {\n      console.error(\"❌ Falló la carga de Leaflet\");\n      const loading = document.getElementById(\"loading\");\n      if (loading) loading.innerText = \"Error cargando Leaflet\";\n    };\n    document.head.appendChild(js);\n  }\n\n  // Manejar mensajes entrantes de Node-RED para Dashboard 2.0\n  this.$watch('msg', function(msg) {\n    console.log(\"📨 Mensaje recibido:\", msg);\n    if (msg && msg.payload && msg.payload.lat && msg.payload.lon) {\n      const { lat, lon, cityName } = msg.payload;\n      console.log(`🎯 Actualizando mapa para: ${cityName} (${lat}, ${lon})`);\n      updateMapLocation(lat, lon, cityName || 'Ubicación');\n    }\n  }, { immediate: true });\n\n  // Esperar a que se monte el widget en dashboard 2.0\n  setTimeout(() => {\n    console.log(\"🚀 Iniciando carga del mapa\");\n    loadLeafletOnce();\n  }, 500);\n</script>",
+        "format": "<div id=\"map\" style=\"height: 500px; width: 100%; border: 1px solid #ccc; position: relative;\">\n  <div id=\"loading\" style=\"position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);\n    background: rgba(255,255,255,0.9); padding: 10px; border-radius: 6px; font-family: Arial;\">\n    🗺️ Cargando mapa del clima...\n  </div>\n</div>\n\n<style>\n  img.leaflet-tile[src*=\"openstreetmap.org\"] {\n    filter: brightness(0.7) !important;\n  }\n\n  img.leaflet-tile[src*=\"clouds_new\"] {\n    filter: contrast(2) brightness(2) saturate(2) !important;\n  }\n\n  img.leaflet-tile[src*=\"precipitation_new\"] {\n    filter: hue-rotate(180deg) brightness(1.6) saturate(2) contrast(2) !important;\n  }\n\n  img.leaflet-tile[src*=\"temp_new\"] {\n    filter: contrast(2) brightness(2) saturate(2) !important;\n  }\n\n  img.leaflet-tile[src*=\"wind_new\"] {\n    filter: contrast(2) brightness(2) saturate(2) !important;\n  }\n</style>\n\n<script>\n  const API_KEY = \"029e2971fd993ff3081a6fdf47ad6f19\"; // ← tu API key\n  let map; // Variable global para el mapa\n  let currentMarker; // Variable para el marcador actual\n\n  function showMap() {\n    const mapDiv = document.getElementById(\"map\");\n    const loading = document.getElementById(\"loading\");\n    if (!mapDiv || typeof window.L === \"undefined\") {\n      console.error(\"❌ Leaflet no está disponible\");\n      return;\n    }\n\n    if (loading) loading.style.display = \"none\";\n\n    // Inicializar mapa centrado en Argentina\n    map = window.L.map(\"map\").setView([-34.6118, -58.3960], 5); // Buenos Aires, Argentina\n\n    window.L.tileLayer(\"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png\", {\n      attribution: \"© OpenStreetMap contributors\"\n    }).addTo(map);\n\n    const layers = {\n      \"☁️ Nubes\": window.L.tileLayer(`https://tile.openweathermap.org/map/clouds_new/{z}/{x}/{y}.png?appid=${API_KEY}`, {opacity: 1}),\n      \"🌧️ Precipitación\": window.L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${API_KEY}`, {opacity: 1}),\n      \"🌡️ Temperatura\": window.L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${API_KEY}`, {opacity: 1}),\n      \"💨 Viento\": window.L.tileLayer(`https://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=${API_KEY}`, {opacity: 1})\n    };\n\n    layers[\"☁️ Nubes\"].addTo(map);\n    window.L.control.layers(null, layers, { collapsed: false }).addTo(map);\n    window.L.control.scale().addTo(map);\n\n    setTimeout(() => map.invalidateSize(), 300);\n  }\n\n  // Función para actualizar la ubicación del mapa\n  function updateMapLocation(lat, lon, cityName) {\n    if (!map) {\n      console.error(\"❌ Mapa no inicializado\");\n      return;\n    }\n    // Guardar el estado actual del zoom\n    const currentZoom = map.getZoom();\n\n    // Remover marcador anterior si existe\n    if (currentMarker) {\n      map.removeLayer(currentMarker);\n    }\n\n    // Centrar mapa en la nueva ubicación\n    map.setView([lat, lon], 10);\n\n    // Agregar marcador en la nueva ubicación\n    currentMarker = window.L.marker([lat, lon])\n      .addTo(map)\n      .bindPopup(`📍 ${cityName}`)\n      .openPopup();\n\n    console.log(`🗺️ Mapa actualizado para: ${cityName} (${lat}, ${lon})`);\n  }\n\n  function waitForLeafletAndInit(retries = 30) {\n    if (window.L && typeof window.L.map === \"function\") {\n      console.log(\"✅ Leaflet disponible como window.L\");\n      showMap();\n    } else if (retries > 0) {\n      console.log(\"⏳ Esperando window.L.map...\");\n      setTimeout(() => waitForLeafletAndInit(retries - 1), 300);\n    } else {\n      console.error(\"❌ Timeout esperando Leaflet\");\n      const loading = document.getElementById(\"loading\");\n      if (loading) loading.innerText = \"Error cargando Leaflet\";\n    }\n  }\n\n  function loadLeafletOnce() {\n    if (document.getElementById(\"leaflet-script\")) {\n      waitForLeafletAndInit();\n      return;\n    }\n\n    const css = document.createElement(\"link\");\n    css.rel = \"stylesheet\";\n    css.href = \"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css\";\n    document.head.appendChild(css);\n\n    const js = document.createElement(\"script\");\n    js.id = \"leaflet-script\";\n    js.src = \"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js\";\n    js.onload = () => {\n      console.log(\"📦 Leaflet script descargado\");\n      waitForLeafletAndInit();\n    };\n    js.onerror = () => {\n      console.error(\"❌ Falló la carga de Leaflet\");\n      const loading = document.getElementById(\"loading\");\n      if (loading) loading.innerText = \"Error cargando Leaflet\";\n    };\n    document.head.appendChild(js);\n  }\n\n  // Manejar mensajes entrantes de Node-RED para Dashboard 2.0\n  this.$watch('msg', function(msg) {\n    console.log(\"📨 Mensaje recibido:\", msg);\n    if (msg && msg.payload && msg.payload.lat && msg.payload.lon) {\n      const { lat, lon, cityName } = msg.payload;\n      console.log(`🎯 Actualizando mapa para: ${cityName} (${lat}, ${lon})`);\n      updateMapLocation(lat, lon, cityName || 'Ubicación');\n    }\n  }, { immediate: true });\n\n  // Esperar a que se monte el widget en dashboard 2.0\n  setTimeout(() => {\n    console.log(\"🚀 Iniciando carga del mapa\");\n    loadLeafletOnce();\n  }, 500);\n</script>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -1787,22 +1408,6 @@
                 "5a449e5d86dca42d"
             ]
         ]
-    },
-    {
-        "id": "e63b533ed795f64d",
-        "type": "debug",
-        "z": "f4763a9faccc7e5d",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 60,
-        "wires": []
     },
     {
         "id": "5a449e5d86dca42d",
